@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بانک نمونه سوالات</title>
+<style>
+body{font-family:Tahoma;background:#f0f2ff;margin:0;color:#222}
+header{background:linear-gradient(135deg,#3730a3,#8174ff);color:white;text-align:center;padding:25px 10px;border-radius:0 0 25px 25px}
+main{max-width:750px;margin:20px auto;padding:12px}
+.card{background:white;padding:18px;border-radius:16px;margin-bottom:16px;box-shadow:0 4px 12px #0001}
+select,button{font:inherit;padding:12px;border-radius:9px;width:100%;margin:7px 0;border:1px solid #ddd}
+button{background:#5145cd;color:white;border:0;cursor:pointer}
+.question{border:1px solid #ddd;padding:13px;border-radius:12px;margin-top:12px}
+.option{display:block;padding:9px;margin:5px 0;background:#f6f5ff;border-radius:8px}
+.answer{background:#e5f8ed;padding:10px;border-radius:8px;margin-top:10px}
+#result{font-size:20px;font-weight:bold;color:#5145cd}
+</style>
+</head>
+<body>
+<header>
+<h1>📚 بانک نمونه سوالات</h1>
+<p>ویژه پایه‌های هفتم، هشتم و نهم</p>
+</header>
+<main>
+<div class="card">
+<h2>انتخاب پایه و درس</h2>
+<select id="grade">
+<option value="7">پایه هفتم</option>
+<option value="8">پایه هشتم</option>
+<option value="9">پایه نهم</option>
+</select>
+<select id="subject">
+<option value="math">ریاضی</option>
+<option value="science">علوم</option>
+<option value="social">مطالعات اجتماعی</option>
+<option value="persian">فارسی</option>
+</select>
+<button onclick="practice()">نمایش سوال و جواب تشریحی</button>
+<button onclick="start()">شروع آزمون آنلاین</button>
+</div>
+<div class="card">
+<h2 id="title">سوالات</h2>
+<div id="questions">پایه و درس را انتخاب کن.</div>
+<div id="result"></div>
+<button id="submit" style="display:none" onclick="check()">محاسبه نمره از ۲۰</button>
+</div>
+</main>
+<script>
+const data={
+math:[
+["حاصل ۵+۳×۲ چیست؟",["۱۶","۱۱","۱۳","۱۰"],1,"ابتدا ضرب می‌کنیم: ۳×۲=۶ و سپس ۵ را اضافه می‌کنیم."],
+["محیط مربع با ضلع ۴ چیست؟",["۸","۱۲","۱۶","۲۰"],2,"محیط مربع برابر چهار برابر ضلع است."],
+["جذر ۶۴ چند است؟",["۶","۷","۸","۹"],2,"۸ ضربدر ۸ برابر ۶۴ است."],
+["اگر x+۳=۱۰ باشد، x چند است؟",["۵","۶","۷","۱۳"],2,"۱۰ منهای ۳ برابر ۷ است."],
+["مجموع زاویه‌های مثلث چند درجه است؟",["۹۰","۱۸۰","۲۷۰","۳۶۰"],1,"مجموع زاویه‌های داخلی مثلث ۱۸۰ درجه است."]
+],
+science:[
+["واحد بنیادی سازنده مواد چیست؟",["سلول","اتم","بافت","اندام"],1,"اتم یکی از واحدهای بنیادی سازنده مواد است."],
+["کدام تغییر فیزیکی است؟",["سوختن کاغذ","زنگ زدن آهن","ذوب شدن یخ","پختن تخم‌مرغ"],2,"در ذوب یخ، جنس ماده تغییر نمی‌کند."],
+["کدام اندام خون را به گردش درمی‌آورد؟",["معده","قلب","ریه","کلیه"],1,"قلب خون را در رگ‌ها به جریان می‌اندازد."],
+["کدام فلز رسانای برق است؟",["مس","چوب","پلاستیک","لاستیک"],0,"مس رسانای خوب برق است."],
+["دما با چه وسیله‌ای اندازه‌گیری می‌شود؟",["ترازو","دماسنج","خط‌کش","ساعت"],1,"دماسنج برای اندازه‌گیری دماست."]
+],
+social:[
+["جهت مقابل شمال کدام است؟",["شرق","غرب","جنوب","شمال‌شرق"],2,"جنوب مقابل شمال است."],
+["نقشه چه کاربردی دارد؟",["نمایش مکان‌ها","اندازه‌گیری وزن","اندازه‌گیری دما","اندازه‌گیری زمان"],0,"نقشه مکان‌ها و ویژگی‌های سطح زمین را نمایش می‌دهد."],
+["کدام منبع طبیعی است؟",["پلاستیک","نفت","دفتر","میز"],1,"نفت یکی از منابع طبیعی است."],
+["چرا باید در مصرف آب صرفه‌جویی کنیم؟",["آب شیرین محدود است","آب کاربرد ندارد","باران نمی‌بارد","آب همیشه آلوده است"],0,"آب شیرین قابل استفاده محدود است."],
+["کدام رفتار همکاری اجتماعی است؟",["کمک به هم‌کلاسی","تخریب وسایل","بی‌توجهی","رعایت نکردن نوبت"],0,"کمک به دیگران نمونه‌ای از همکاری است."]
+],
+persian:[
+["کدام کلمه اسم است؟",["زیبا","رفت","دانش‌آموز","آرام"],2,"دانش‌آموز نام یک شخص است."],
+["مخالف روشن چیست؟",["نورانی","تاریک","سفید","درخشان"],1,"تاریک مخالف روشن است."],
+["کدام جمله پرسشی است؟",["هوا خوب است.","کتاب را باز کن.","آیا آمدی؟","چه روز زیبایی!"],2,"جمله پرسشی برای پرسیدن به کار می‌رود."],
+["کدام واژه صفت است؟",["مدرسه","دوید","مهربان","دفتر"],2,"مهربان ویژگی شخص را بیان می‌کند."],
+["مترادف شاد چیست؟",["غمگین","خوشحال","خسته","ناراحت"],1,"شاد و خوشحال هم‌معنی هستند."]
+]
+};
+let items=[],mode="practice";
+function getItems(){
+let g=document.getElementById("grade").value;
+let s=document.getElementById("subject").value;
+return data[s].map((q,i)=>g==="7"?q:g==="8"?[
+["حاصل ۳ به توان ۲ چیست؟",["۶","۹","۸","۱۲"],1,"۳×۳ برابر ۹ است."],
+["اگر x+۵=۱۲ باشد، x چند است؟",["۵","۶","۷","۱۷"],2,"۱۲ منهای ۵ برابر ۷ است."],
+["مجموع زاویه‌های مثلث چند است؟",["۹۰","۱۸۰","۲۷۰","۳۶۰"],1,"مجموع زاویه‌های مثلث ۱۸۰ درجه است."],
+["جذر ۸۱ چیست؟",["۷","۸","۹","۱۰"],2,"۹×۹ برابر ۸۱ است."],
+["کدام عدد بر ۳ بخش‌پذیر است؟",["۱۲۴","۱۲۵","۱۲۶","۱۲۸"],2,"مجموع رقم‌های ۱۲۶ برابر ۹ است."]
+][i]:[
+["اگر ۲x=۱۸ باشد، x چند است؟",["۶","۸","۹","۱۲"],2,"۱۸ تقسیم بر ۲ برابر ۹ است."],
+["حاصل (x+۳)(x+۲) چیست؟",["x²+۵x+۶","x²+۶","x²+x+۵","۲x+۵"],0,"ضرب عبارت‌ها برابر x²+۵x+۶ است."],
+["وتر کدام ضلع است؟",["مقابل زاویه قائمه","کوتاه‌ترین ضلع","هر ضلع","ضلع دلخواه"],0,"وتر روبه‌روی زاویه ۹۰ درجه قرار دارد."],
+["شیب خط y=۳x+۲ چیست؟",["۲","۳","۵","۱"],1,"ضریب x شیب خط است."],
+["احتمال آمدن عدد زوج در تاس چیست؟",["۱/۶","۲/۶","۳/۶","۶/۶"],2,"سه عدد از شش عدد تاس زوج‌اند."]
+][i]);
+}
+function render(show){
+let root=document.getElementById("questions");
+root.innerHTML="";
+items.forEach((q,i)=>{
+let d=document.createElement("div");d.className="question";
+let h=document.createElement("h3");h.textContent=(i+1)+". "+q[0];d.appendChild(h);
+q[1].forEach((o,j)=>{
+let l=document.createElement("label");l.className="option";
+let r=document.createElement("input");r.type="radio";r.name="q"+i;r.value=j;
+l.appendChild(r);l.appendChild(document.createTextNode(" "+o));d.appendChild(l);
+});
+if(show){let a=document.createElement("div");a.className="answer";a.textContent="پاسخ درست: "+q[1][q[2]]+" — "+q[3];d.appendChild(a);}
+root.appendChild(d);
+});
+}
+function practice(){
+mode="practice";items=getItems();render(true);
+document.getElementById("title").textContent="📖 سوال‌ها و پاسخ‌های تشریحی";
+document.getElementById("submit").style.display="none";
+document.getElementById("result").textContent="";
+}
+function start(){
+mode="quiz";items=getItems();render(false);
+document.getElementById("title").textContent="🎯 آزمون آنلاین";
+document.getElementById("submit").style.display="block";
+document.getElementById("result").textContent="";
+}
+function check(){
+let correct=0;
+items.forEach((q,i)=>{
+let a=document.querySelector('input[name="q'+i+'"]:checked');
+if(a&&Number(a.value)===q[2])correct++;
+});
+document.getElementById("result").textContent="نمره شما: "+(correct*4)+" از ۲۰ ("+correct+" پاسخ درست از "+items.length+")";
+}
+</script>
+</body>
+</html>
