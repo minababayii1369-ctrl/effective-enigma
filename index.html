@@ -1,370 +1,383 @@
-```html
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-site-verification" content="qC0-26m4CIhx9QYBFky1Hhz8WGaETHRwOB3cnfG7bD8">
-<meta name="description" content="نورا؛ سایت آموزش و تمرین آنلاین با نمونه سوالات درسی پایه‌های هفتم، هشتم و نهم.">
-<meta name="theme-color" content="#6c4cff">
-<title>نورا</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* { box-sizing: border-box; }
+  <title>نورا | آموزش و نمونه سوالات درسی</title>
 
-body {
-  font-family: Tahoma, sans-serif;
-  background: #f3f0ff;
-  margin: 0;
-  color: #26213b;
-  line-height: 1.9;
-}
+  <meta name="description" content="نورا، سایت آموزشی برای تمرین درس‌ها و نمونه سوالات پایه‌های هفتم، هشتم و نهم. یادگیری آسان و تمرین رایگان در نورا.">
 
-header {
-  background: linear-gradient(135deg, #4830b8, #9c7bff);
-  color: white;
-  text-align: center;
-  padding: 38px 15px;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 5px 18px #5540a533;
-}
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="qC0-26m4CIhx9QYBFky1Hhz8WGaETHRwOB3cnfG7bD8">
 
-header h1 {
-  font-size: 42px;
-  margin: 0;
-}
+  <meta property="og:title" content="نورا | سایت آموزشی">
+  <meta property="og:description" content="در نورا درس بخوان، تمرین کن و پیشرفت کن.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://minababayii1369-ctrl.github.io/effective-enigma/">
 
-header p {
-  margin: 8px 0 0;
-}
+  <meta name="theme-color" content="#6c4be8">
 
-main {
-  max-width: 760px;
-  margin: 22px auto;
-  padding: 12px;
-}
+  <link rel="canonical" href="https://minababayii1369-ctrl.github.io/effective-enigma/">
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 18px;
-  margin-bottom: 18px;
-  box-shadow: 0 5px 20px #29204a10;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-h2 {
-  color: #5138c7;
-  margin-top: 0;
-}
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f5f3ff;
+      color: #25213b;
+      line-height: 1.9;
+    }
 
-select, button {
-  font: inherit;
-  padding: 12px;
-  border-radius: 10px;
-  width: 100%;
-  margin: 7px 0;
-}
+    header {
+      background: linear-gradient(135deg, #6546e8, #9a6bfa);
+      color: white;
+      text-align: center;
+      padding: 35px 16px;
+    }
 
-select {
-  border: 1px solid #ddd6fe;
-  background: white;
-  color: #26213b;
-}
+    header h1 {
+      font-size: 42px;
+      margin: 0;
+    }
 
-button {
-  background: #6046d9;
-  color: white;
-  border: 0;
-  cursor: pointer;
-}
+    header p {
+      margin-bottom: 0;
+    }
 
-button:active {
-  opacity: .8;
-}
+    nav {
+      background: white;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 10px #00000010;
+      z-index: 2;
+    }
 
-.secondary {
-  background: #eee9ff;
-  color: #4d35b5;
-}
+    nav a {
+      color: #6546e8;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
 
-.question {
-  border: 1px solid #e4defb;
-  padding: 14px;
-  border-radius: 13px;
-  margin-top: 14px;
-}
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
 
-.question h3 {
-  font-size: 16px;
-}
+    .welcome {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      margin: 20px 0;
+      text-align: center;
+      box-shadow: 0 5px 20px #4b328510;
+    }
 
-.option {
-  display: block;
-  padding: 8px;
-  margin: 6px 0;
-  background: #f7f5ff;
-  border-radius: 8px;
-  cursor: pointer;
-}
+    .welcome h2 {
+      color: #6546e8;
+    }
 
-.option input {
-  margin-left: 7px;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
 
-.answer {
-  background: #e8f8ed;
-  padding: 11px;
-  border-radius: 9px;
-  margin-top: 12px;
-}
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px #4b328510;
+    }
 
-#result {
-  font-size: 19px;
-  font-weight: bold;
-  color: #5138c7;
-  margin-top: 12px;
-}
+    .card h3 {
+      color: #6546e8;
+      margin-top: 0;
+    }
 
-footer {
-  text-align: center;
-  color: #766d91;
-  padding: 20px;
-}
-</style>
+    button, select {
+      font-family: inherit;
+      font-size: 15px;
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin: 5px 0;
+    }
+
+    button {
+      background: #6546e8;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #5032c7;
+    }
+
+    select {
+      border: 1px solid #ddd5ff;
+      background: white;
+      width: 100%;
+    }
+
+    .quiz {
+      background: white;
+      padding: 24px;
+      border-radius: 18px;
+      margin: 24px 0;
+    }
+
+    .question {
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+    }
+
+    .answer {
+      display: none;
+      background: #f0ebff;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+
+    .small {
+      color: #6e6880;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #28213f;
+      color: white;
+      text-align: center;
+      padding: 24px 12px;
+      margin-top: 35px;
+    }
+
+    footer p {
+      margin: 4px;
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <h1>نورا</h1>
+    <p>یادگیری آسان، پیشرفت هر روز</p>
+  </header>
 
-<header>
-  <h1>نورا</h1>
-  <p>یاد بگیر، تمرین کن و پیشرفت کن ✨</p>
-</header>
+  <nav>
+    <a href="#home">خانه</a>
+    <a href="#lessons">درس‌ها</a>
+    <a href="#questions">نمونه سؤال</a>
+    <a href="#about">درباره نورا</a>
+  </nav>
 
-<main>
+  <main>
+    <section class="welcome" id="home">
+      <h2>به سایت نورا خوش آمدید!</h2>
+      <p>
+        در نورا می‌توانی درس‌هایت را مرور کنی،
+        به سؤال‌ها پاسخ بدهی و آموخته‌هایت را تمرین کنی.
+      </p>
+      <a href="#questions">
+        <button>شروع تمرین</button>
+      </a>
+    </section>
 
-<div class="card">
-  <h2>📚 انتخاب پایه و درس</h2>
+    <section id="lessons">
+      <h2>پایه‌های تحصیلی</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>📘 پایه هفتم</h3>
+          <p>برای مرور درس‌ها و تمرین بیشتر.</p>
+          <button onclick="chooseGrade('7')">انتخاب پایه هفتم</button>
+        </article>
 
-  <label for="grade">پایه تحصیلی:</label>
-  <select id="grade">
-    <option value="7">پایه هفتم</option>
-    <option value="8">پایه هشتم</option>
-    <option value="9">پایه نهم</option>
-  </select>
+        <article class="card">
+          <h3>📗 پایه هشتم</h3>
+          <p>برای آمادگی امتحان و یادگیری بهتر.</p>
+          <button onclick="chooseGrade('8')">انتخاب پایه هشتم</button>
+        </article>
 
-  <label for="subject">درس:</label>
-  <select id="subject">
-    <option value="math">ریاضی</option>
-    <option value="science">علوم</option>
-    <option value="social">مطالعات اجتماعی</option>
-    <option value="persian">فارسی</option>
-  </select>
+        <article class="card">
+          <h3>📙 پایه نهم</h3>
+          <p>برای تمرین درسی و سنجش آموخته‌ها.</p>
+          <button onclick="chooseGrade('9')">انتخاب پایه نهم</button>
+        </article>
+      </div>
+    </section>
 
-  <button onclick="practice()">📖 نمایش سوال و جواب</button>
-  <button class="secondary" onclick="start()">🎯 شروع آزمون آنلاین</button>
-</div>
+    <section class="quiz" id="questions">
+      <h2>نمونه سؤال‌های نورا</h2>
+      <p>پایه و درس را انتخاب کن تا سؤال‌های تمرینی نمایش داده شوند.</p>
 
-<div class="card">
-  <h2 id="title">به نورا خوش آمدی!</h2>
-  <div id="questions">برای شروع، پایه و درس را انتخاب کن.</div>
-  <div id="result" aria-live="polite"></div>
-  <button id="submit" style="display:none" onclick="check()">محاسبه نمره از ۲۰</button>
-  <button id="retry" class="secondary" style="display:none" onclick="start()">تکرار آزمون</button>
-</div>
+      <label for="grade">پایه تحصیلی:</label>
+      <select id="grade" onchange="showQuestions()">
+        <option value="7">هفتم</option>
+        <option value="8" selected>هشتم</option>
+        <option value="9">نهم</option>
+      </select>
 
-</main>
+      <label for="subject">درس:</label>
+      <select id="subject" onchange="showQuestions()">
+        <option value="math">ریاضی</option>
+        <option value="science">علوم</option>
+        <option value="social">مطالعات اجتماعی</option>
+        <option value="persian">فارسی</option>
+      </select>
 
-<footer>
-  نورا؛ یادگیری ساده‌تر، آینده روشن‌تر 💜
-</footer>
+      <div id="questionList"></div>
+    </section>
 
-<script>
-const data = {
-  math: {
-    7: [
-      ["حاصل ۵ + ۳ × ۲ چیست؟", ["۱۶","۱۱","۱۳","۱۰"], 1, "ابتدا ضرب: ۳ × ۲ = ۶؛ سپس ۵ را اضافه می‌کنیم."],
-      ["محیط مربع با ضلع ۴ چیست؟", ["۸","۱۲","۱۶","۲۰"], 2, "محیط مربع برابر چهار برابر ضلع است."],
-      ["جذر ۶۴ چند است؟", ["۶","۷","۸","۹"], 2, "۸ × ۸ = ۶۴."],
-      ["اگر x + ۳ = ۱۰ باشد، x چند است؟", ["۵","۶","۷","۱۳"], 2, "۱۰ منهای ۳ برابر ۷ است."],
-      ["مجموع زاویه‌های مثلث چند درجه است؟", ["۹۰","۱۸۰","۲۷۰","۳۶۰"], 1, "مجموع زاویه‌های داخلی مثلث ۱۸۰ درجه است."]
-    ],
-    8: [
-      ["حاصل ۳ به توان ۲ چیست؟", ["۶","۹","۸","۱۲"], 1, "۳ × ۳ برابر ۹ است."],
-      ["اگر x + ۵ = ۱۲ باشد، x چند است؟", ["۵","۶","۷","۱۷"], 2, "۱۲ منهای ۵ برابر ۷ است."],
-      ["مجموع زاویه‌های مثلث چند درجه است؟", ["۹۰","۱۸۰","۲۷۰","۳۶۰"], 1, "مجموع زاویه‌های مثلث ۱۸۰ درجه است."],
-      ["جذر ۸۱ چیست؟", ["۷","۸","۹","۱۰"], 2, "۹ × ۹ برابر ۸۱ است."],
-      ["کدام عدد بر ۳ بخش‌پذیر است؟", ["۱۲۴","۱۲۵","۱۲۶","۱۲۸"], 2, "مجموع رقم‌های ۱۲۶ برابر ۹ است."]
-    ],
-    9: [
-      ["اگر ۲x = ۱۸ باشد، x چند است؟", ["۶","۸","۹","۱۲"], 2, "۱۸ تقسیم بر ۲ برابر ۹ است."],
-      ["حاصل (x + ۳)(x + ۲) چیست؟", ["x² + ۵x + ۶","x² + ۶","x² + x + ۵","۲x + ۵"], 0, "با ضرب عبارت‌ها به x² + ۵x + ۶ می‌رسیم."],
-      ["وتر کدام ضلع است؟", ["مقابل زاویه قائمه","کوتاه‌ترین ضلع","هر ضلع","ضلع دلخواه"], 0, "وتر روبه‌روی زاویه ۹۰ درجه است."],
-      ["شیب خط y = ۳x + ۲ چیست؟", ["۲","۳","۵","۱"], 1, "ضریب x شیب خط است."],
-      ["احتمال آمدن عدد زوج در تاس سالم چیست؟", ["۱/۶","۲/۶","۳/۶","۶/۶"], 2, "سه عدد از شش عدد تاس زوج هستند."]
-    ]
-  },
+    <section class="welcome" id="about">
+      <h2>درباره نورا</h2>
+      <p>
+        نورا یک سایت آموزشی برای تمرین و مرور درس‌هاست.
+        هدف نورا این است که یادگیری ساده‌تر و تمرین کردن لذت‌بخش‌تر شود.
+      </p>
+      <p class="small">
+        برای پیشنهادها و افزودن سؤال‌های جدید، می‌توانی سایت را در آینده توسعه بدهی.
+      </p>
+    </section>
+  </main>
 
-  science: {
-    7: [
-      ["واحد بنیادی سازنده مواد چیست؟", ["سلول","اتم","بافت","اندام"], 1, "اتم یکی از واحدهای بنیادی سازنده مواد است."],
-      ["کدام تغییر فیزیکی است؟", ["سوختن کاغذ","زنگ زدن آهن","ذوب شدن یخ","پختن تخم‌مرغ"], 2, "در ذوب یخ، ماده جدیدی تشکیل نمی‌شود."],
-      ["کدام اندام خون را به گردش درمی‌آورد؟", ["معده","قلب","ریه","کلیه"], 1, "قلب خون را در رگ‌ها به جریان می‌اندازد."],
-      ["کدام فلز رسانای برق است؟", ["مس","چوب","پلاستیک","لاستیک"], 0, "مس رسانای خوب برق است."],
-      ["دما با چه وسیله‌ای اندازه‌گیری می‌شود؟", ["ترازو","دماسنج","خط‌کش","ساعت"], 1, "دماسنج برای اندازه‌گیری دماست."]
-    ],
-    8: [
-      ["واحد اندازه‌گیری نیرو چیست؟", ["متر","نیوتون","لیتر","ثانیه"], 1, "نیرو با واحد نیوتون اندازه‌گیری می‌شود."],
-      ["کدام اندام خون را پمپ می‌کند؟", ["مغز","قلب","معده","پوست"], 1, "قلب خون را به سراسر بدن می‌فرستد."],
-      ["کدام ماده رسانای برق است؟", ["مس","چوب خشک","پلاستیک","شیشه"], 0, "مس رسانای الکتریکی خوبی است."],
-      ["گیاهان برای فتوسنتز به چه چیزی نیاز دارند؟", ["نور","تاریکی مطلق","پلاستیک","شن"], 0, "نور یکی از نیازهای فتوسنتز است."],
-      ["کدام حالت ماده شکل ثابت دارد؟", ["گاز","مایع","جامد","بخار"], 2, "جامد شکل مشخصی دارد."]
-    ],
-    9: [
-      ["واحد جریان الکتریکی چیست؟", ["ولت","آمپر","اهم","وات"], 1, "واحد جریان الکتریکی آمپر است."],
-      ["کدام ذره بار منفی دارد؟", ["پروتون","نوترون","الکترون","هسته"], 2, "الکترون دارای بار منفی است."],
-      ["گیاهان در فتوسنتز چه گازی جذب می‌کنند؟", ["اکسیژن","نیتروژن","کربن‌دی‌اکسید","هیدروژن"], 2, "گیاهان کربن‌دی‌اکسید جذب می‌کنند."],
-      ["واحد نیرو چیست؟", ["نیوتون","متر","کیلوگرم","ثانیه"], 0, "نیرو با نیوتون سنجیده می‌شود."],
-      ["کدام سیاره به خورشید نزدیک‌تر است؟", ["زمین","مریخ","عطارد","مشتری"], 2, "عطارد نزدیک‌ترین سیاره به خورشید است."]
-    ]
-  },
+  <footer>
+    <p>نورا | آموزش و تمرین درسی</p>
+    <p>یادگیری ساده‌تر، آینده روشن‌تر 💜</p>
+  </footer>
 
-  social: {
-    7: [
-      ["جهت مقابل شمال کدام است؟", ["شرق","غرب","جنوب","شمال‌شرق"], 2, "جنوب مقابل شمال است."],
-      ["نقشه چه کاربردی دارد؟", ["نمایش مکان‌ها","اندازه‌گیری وزن","اندازه‌گیری دما","اندازه‌گیری زمان"], 0, "نقشه مکان‌ها و ویژگی‌های سطح زمین را نمایش می‌دهد."],
-      ["کدام منبع طبیعی است؟", ["پلاستیک","نفت","دفتر","میز"], 1, "نفت یکی از منابع طبیعی است."],
-      ["چرا باید در مصرف آب صرفه‌جویی کنیم؟", ["آب شیرین محدود است","آب کاربرد ندارد","باران نمی‌بارد","آب همیشه آلوده است"], 0, "آب شیرین قابل استفاده محدود است."],
-      ["کدام رفتار همکاری اجتماعی است؟", ["کمک به هم‌کلاسی","تخریب وسایل","بی‌توجهی","رعایت نکردن نوبت"], 0, "کمک به دیگران نمونه‌ای از همکاری است."]
-    ],
-    8: [
-      ["قانون چه کاربردی دارد؟", ["ایجاد نظم","ایجاد بی‌نظمی","توقف یادگیری","هیچ کاربردی ندارد"], 0, "قانون به ایجاد نظم و حفظ حقوق افراد کمک می‌کند."],
-      ["کدام مورد منبع طبیعی است؟", ["نفت","پلاستیک","دفتر","صندلی"], 0, "نفت از منابع طبیعی است."],
-      ["صرفه‌جویی در آب چه اهمیتی دارد؟", ["حفظ منابع آب","افزایش آلودگی","هدر دادن منابع","کاهش باران"], 0, "آب شیرین محدود است و باید از آن محافظت کنیم."],
-      ["کدام رفتار شهروندی مناسب است؟", ["رعایت قانون","تخریب اموال عمومی","ریختن زباله","آزار دیگران"], 0, "رعایت قانون به زندگی بهتر اجتماعی کمک می‌کند."],
-      ["نقشه برای چه کاری استفاده می‌شود؟", ["شناخت مکان‌ها","سنجش دما","سنجش وزن","تعیین سن"], 0, "نقشه موقعیت مکان‌ها را نشان می‌دهد."]
-    ],
-    9: [
-      ["قانون اساسی چه اهمیتی دارد؟", ["تعیین اصول اصلی کشور","تعیین وضعیت هوا","اندازه‌گیری فاصله","تعیین زمان"], 0, "قانون اساسی اصول و ساختار کلی کشور را مشخص می‌کند."],
-      ["شهروند مسئول چه می‌کند؟", ["حقوق دیگران را رعایت می‌کند","قانون را نادیده می‌گیرد","اموال عمومی را تخریب می‌کند","به دیگران آسیب می‌زند"], 0, "شهروند مسئول به حقوق دیگران احترام می‌گذارد."],
-      ["کدام مورد منبع انرژی است؟", ["نفت","کاغذ باطله","شیشه شکسته","پلاستیک مصرف‌شده"], 0, "نفت یکی از منابع انرژی است."],
-      ["هدف همکاری اجتماعی چیست؟", ["حل بهتر مشکلات","ایجاد اختلاف","تخریب اموال","افزایش بی‌نظمی"], 0, "همکاری به حل مشکلات مشترک کمک می‌کند."],
-      ["چرا باید از محیط زیست محافظت کنیم؟", ["حفظ زندگی و منابع طبیعی","افزایش آلودگی","هدر دادن آب","تخریب جنگل‌ها"], 0, "محیط زیست برای زندگی انسان‌ها و دیگر موجودات ضروری است."]
-    ]
-  },
+  <script>
+    const questions = {
+      "7": {
+        math: [
+          {q: "حاصل ۵ + ۷ چیست؟", a: "۱۲"},
+          {q: "حاصل ۶ × ۴ چیست؟", a: "۲۴"},
+          {q: "عدد ۱۵ زوج است یا فرد؟", a: "فرد"}
+        ],
+        science: [
+          {q: "آب از چه عناصری ساخته شده است؟", a: "هیدروژن و اکسیژن"},
+          {q: "زمین به دور چه چیزی می‌چرخد؟", a: "خورشید"},
+          {q: "گیاهان برای رشد به چه چیزهایی نیاز دارند؟", a: "آب، نور، هوا و مواد مغذی"}
+        ],
+        social: [
+          {q: "نقشه چه چیزی را نشان می‌دهد؟", a: "نمایی از مکان‌ها و پدیده‌های جغرافیایی"},
+          {q: "چرا قانون مهم است؟", a: "برای نظم و حفظ حقوق افراد"},
+          {q: "خانواده یکی از چه گروه‌هایی است؟", a: "گروه‌های اجتماعی"}
+        ],
+        persian: [
+          {q: "اسم چیست؟", a: "کلمه‌ای برای نامیدن انسان، حیوان، مکان یا چیز"},
+          {q: "مخالف روشن چیست؟", a: "تاریک"},
+          {q: "مترادف شادی چیست؟", a: "خوشحالی"}
+        ]
+      },
+      "8": {
+        math: [
+          {q: "حاصل ۳² چیست؟", a: "۹"},
+          {q: "اگر x + ۵ = ۱۲ باشد، x چند است؟", a: "۷"},
+          {q: "مجموع زاویه‌های داخلی مثلث چند درجه است؟", a: "۱۸۰ درجه"}
+        ],
+        science: [
+          {q: "واحد اندازه‌گیری نیرو چیست؟", a: "نیوتون"},
+          {q: "ذره با بار منفی در اتم چیست؟", a: "الکترون"},
+          {q: "تغییر حالت مایع به گاز چه نام دارد؟", a: "تبخیر"}
+        ],
+        social: [
+          {q: "قانون اساسی چیست؟", a: "قانون اصلی کشور که ساختار و اصول حکومت را مشخص می‌کند."},
+          {q: "چرا مشارکت اجتماعی اهمیت دارد؟", a: "به بهتر شدن جامعه و همکاری مردم کمک می‌کند."},
+          {q: "یکی از منابع طبیعی را نام ببر.", a: "آب، خاک، جنگل یا نفت"}
+        ],
+        persian: [
+          {q: "مخالف دانا چیست؟", a: "نادان"},
+          {q: "فعل در جمله چه چیزی را نشان می‌دهد؟", a: "کار یا حالت را"},
+          {q: "مترادف کوشش چیست؟", a: "تلاش"}
+        ]
+      },
+      "9": {
+        math: [
+          {q: "حاصل ۲ به توان ۴ چیست؟", a: "۱۶"},
+          {q: "اگر ۲x = ۱۸ باشد، x چند است؟", a: "۹"},
+          {q: "جذر ۸۱ چیست؟", a: "۹"}
+        ],
+        science: [
+          {q: "واحد اندازه‌گیری انرژی چیست؟", a: "ژول"},
+          {q: "سلول چیست؟", a: "واحد بنیادی ساختار و عملکرد جانداران"},
+          {q: "نیروی اصطکاک معمولاً با حرکت چگونه برخورد می‌کند؟", a: "با آن مخالفت می‌کند"}
+        ],
+        social: [
+          {q: "شهروندی به چه معناست؟", a: "داشتن حقوق و مسئولیت‌های یک فرد در جامعه"},
+          {q: "چرا منابع طبیعی باید حفظ شوند؟", a: "برای نیازهای امروز و نسل‌های آینده"},
+          {q: "یکی از وظایف شهروندان را بگو.", a: "رعایت قانون و احترام به حقوق دیگران"}
+        ],
+        persian: [
+          {q: "مخالف پیروزی چیست؟", a: "شکست"},
+          {q: "تشبیه چیست؟", a: "مانند کردن چیزی به چیز دیگر به دلیل داشتن ویژگی مشترک"},
+          {q: "مترادف اندیشه چیست؟", a: "فکر"}
+        ]
+      }
+    };
 
-  persian: {
-    7: [
-      ["کدام کلمه اسم است؟", ["زیبا","رفت","دانش‌آموز","آرام"], 2, "دانش‌آموز نام یک شخص یا فرد است."],
-      ["مخالف روشن چیست؟", ["نورانی","تاریک","سفید","درخشان"], 1, "تاریک مخالف روشن است."],
-      ["کدام جمله پرسشی است؟", ["هوا خوب است.","کتاب را باز کن.","آیا آمدی؟","چه روز زیبایی!"], 2, "جمله پرسشی برای پرسیدن به کار می‌رود."],
-      ["کدام واژه صفت است؟", ["مدرسه","دوید","مهربان","دفتر"], 2, "مهربان ویژگی شخص را بیان می‌کند."],
-      ["مترادف شاد چیست؟", ["غمگین","خوشحال","خسته","ناراحت"], 1, "شاد و خوشحال هم‌معنی هستند."]
-    ],
-    8: [
-      ["مترادف کوشش چیست؟", ["تلاش","استراحت","غفلت","توقف"], 0, "کوشش و تلاش هم‌معنی هستند."],
-      ["مخالف آغاز چیست؟", ["شروع","ابتدا","پایان","حرکت"], 2, "پایان مخالف آغاز است."],
-      ["کدام واژه صفت است؟", ["دانش","زیبا","نوشتن","مدرسه"], 1, "زیبا ویژگی یک چیز را بیان می‌کند."],
-      ["کدام جمله پرسشی است؟", ["امروز باران آمد.","کجا می‌روی؟","کتاب را بیاور.","چه هوای خوبی!"], 1, "این جمله یک پرسش است."],
-      ["مترادف اندوه چیست؟", ["شادی","غم","خنده","امید"], 1, "اندوه و غم هم‌معنی هستند."]
-    ],
-    9: [
-      ["مخالف فروتنی چیست؟", ["تواضع","غرور","مهربانی","گذشت"], 1, "غرور مخالف فروتنی است."],
-      ["مترادف شجاعت چیست؟", ["ترس","دلاوری","اندوه","تردید"], 1, "شجاعت و دلاوری هم‌معنی هستند."],
-      ["کدام واژه قید است؟", ["آرام‌آرام","مدرسه","کتاب","دانش‌آموز"], 0, "آرام‌آرام چگونگی انجام کار را نشان می‌دهد."],
-      ["کدام جمله عاطفی است؟", ["آیا آمدی؟","چه منظره زیبایی!","در را ببند.","او به مدرسه رفت."], 1, "جمله عاطفی احساس و هیجان را بیان می‌کند."],
-      ["مترادف خردمند چیست؟", ["نادان","دانا","خسته","اندوهگین"], 1, "خردمند و دانا هم‌معنی هستند."]
-    ]
-  }
-};
+    const subjectNames = {
+      math: "ریاضی",
+      science: "علوم",
+      social: "مطالعات اجتماعی",
+      persian: "فارسی"
+    };
 
-let items = [];
-let mode = "practice";
-
-function getItems() {
-  const grade = document.getElementById("grade").value;
-  const subject = document.getElementById("subject").value;
-  return data[subject][grade];
-}
-
-function render(showAnswers) {
-  const root = document.getElementById("questions");
-  root.innerHTML = "";
-
-  items.forEach((q, i) => {
-    const d = document.createElement("div");
-    d.className = "question";
-
-    const h = document.createElement("h3");
-    h.textContent = (i + 1) + ". " + q[0];
-    d.appendChild(h);
-
-    q[1].forEach((option, j) => {
-      const label = document.createElement("label");
-      label.className = "option";
-
-      const radio = document.createElement("input");
-      radio.type = "radio";
-      radio.name = "q" + i;
-      radio.value = j;
-
-      label.appendChild(radio);
-      label.appendChild(document.createTextNode(" " + option));
-      d.appendChild(label);
-    });
-
-    if (showAnswers) {
-      const answer = document.createElement("div");
-      answer.className = "answer";
-      answer.textContent = "پاسخ درست: " + q[1][q[2]] + " — " + q[3];
-      d.appendChild(answer);
+    function chooseGrade(grade) {
+      document.getElementById("grade").value = grade;
+      document.getElementById("questions").scrollIntoView({
+        behavior: "smooth"
+      });
+      showQuestions();
     }
 
-    root.appendChild(d);
-  });
-}
+    function showQuestions() {
+      const grade = document.getElementById("grade").value;
+      const subject = document.getElementById("subject").value;
+      const list = document.getElementById("questionList");
+      const items = questions[grade][subject];
 
-function practice() {
-  mode = "practice";
-  items = getItems();
-  render(true);
+      list.innerHTML = "<h3>پایه " + grade +
+        " — درس " + subjectNames[subject] + "</h3>";
 
-  document.getElementById("title").textContent = "📖 سوال‌ها و پاسخ‌های تشریحی";
-  document.getElementById("submit").style.display = "none";
-  document.getElementById("retry").style.display = "none";
-  document.getElementById("result").textContent = "";
-}
+      items.forEach((item, index) => {
+        const box = document.createElement("div");
+        box.className = "question";
 
-function start() {
-  mode = "quiz";
-  items = getItems();
-  render(false);
+        const title = document.createElement("p");
+        title.textContent = (index + 1) + ". " + item.q;
 
-  document.getElementById("title").textContent = "🎯 آزمون آنلاین";
-  document.getElementById("submit").style.display = "block";
-  document.getElementById("retry").style.display = "none";
-  document.getElementById("result").textContent = "";
-}
+        const button = document.createElement("button");
+        button.textContent = "نمایش پاسخ";
 
-function check() {
-  let correct = 0;
+        const answer = document.createElement("div");
+        answer.className = "answer";
+        answer.textContent = "پاسخ: " + item.a;
 
-  items.forEach((q, i) => {
-    const selected = document.querySelector('input[name="q' + i + '"]:checked');
-    if (selected && Number(selected.value) === q[2]) {
-      correct++;
+        button.onclick = function() {
+          const isVisible = answer.style.display === "block";
+          answer.style.display = isVisible ? "none" : "block";
+          button.textContent = isVisible ? "نمایش پاسخ" : "پنهان کردن پاسخ";
+        };
+
+        box.appendChild(title);
+        box.appendChild(button);
+        box.appendChild(answer);
+        list.appendChild(box);
+      });
     }
-  });
 
-  const score = correct * 4;
-  document.getElementById("result").textContent =
-    "نمره شما: " + score + " از ۲۰ — " +
-    correct + " پاسخ درست از " + items.length;
-
-  document.getElementById("retry").style.display = "block";
-}
-</script>
-
+    showQuestions();
+  </script>
 </body>
-</html>
-```
-  
+        </html>
