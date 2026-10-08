@@ -5,379 +5,764 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>نورا | آموزش و نمونه سوالات درسی</title>
-
-  <meta name="description" content="نورا، سایت آموزشی برای تمرین درس‌ها و نمونه سوالات پایه‌های هفتم، هشتم و نهم. یادگیری آسان و تمرین رایگان در نورا.">
-
+  <title>نورا | بانک نمونه‌سؤال و آزمون آنلاین</title>
+  <meta name="description" content="نورا؛ بانک نمونه‌سؤال‌های پایه هفتم، هشتم و نهم، آزمون آنلاین با نمره خودکار و جزوه‌های آموزشی قابل چاپ.">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="qC0-26m4CIhx9QYBFky1Hhz8WGaETHRwOB3cnfG7bD8">
+  <link rel="canonical" href="https://minababayii1369-ctrl.github.io/effective-enigma/">
+  <meta name="theme-color" content="#6546e8">
 
-  <meta property="og:title" content="نورا | سایت آموزشی">
-  <meta property="og:description" content="در نورا درس بخوان، تمرین کن و پیشرفت کن.">
+  <meta property="og:title" content="نورا | بانک نمونه‌سؤال و آزمون آنلاین">
+  <meta property="og:description" content="با نورا تمرین کن، آزمون بده و پاسخ‌ها را یاد بگیر.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://minababayii1369-ctrl.github.io/effective-enigma/">
 
-  <meta name="theme-color" content="#6c4be8">
-
-  <link rel="canonical" href="https://minababayii1369-ctrl.github.io/effective-enigma/">
-
   <style>
+    :root {
+      --primary: #6546e8;
+      --primary-dark: #4930bd;
+      --bg: #f6f5ff;
+      --text: #24213a;
+      --muted: #706d82;
+      --white: #ffffff;
+      --border: #e8e4f7;
+      --green: #16865b;
+    }
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Tahoma, Arial, sans-serif;
-      background: #f5f3ff;
-      color: #25213b;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.9;
     }
 
-    header {
-      background: linear-gradient(135deg, #6546e8, #9a6bfa);
-      color: white;
-      text-align: center;
-      padding: 35px 16px;
-    }
-
-    header h1 {
-      font-size: 42px;
-      margin: 0;
-    }
-
-    header p {
-      margin-bottom: 0;
-    }
-
-    nav {
-      background: white;
-      padding: 12px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      box-shadow: 0 2px 10px #00000010;
-      z-index: 2;
-    }
-
-    nav a {
-      color: #6546e8;
+    a {
+      color: inherit;
       text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .welcome {
-      background: white;
-      border-radius: 18px;
-      padding: 25px;
-      margin: 20px 0;
-      text-align: center;
-      box-shadow: 0 5px 20px #4b328510;
-    }
-
-    .welcome h2 {
-      color: #6546e8;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 16px;
-      margin: 20px 0;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 15px #4b328510;
-    }
-
-    .card h3 {
-      color: #6546e8;
-      margin-top: 0;
     }
 
     button, select {
-      font-family: inherit;
-      font-size: 15px;
-      border: 0;
-      border-radius: 10px;
-      padding: 12px 16px;
-      margin: 5px 0;
+      font: inherit;
     }
 
     button {
-      background: #6546e8;
-      color: white;
       cursor: pointer;
     }
 
-    button:hover {
-      background: #5032c7;
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
     }
 
-    select {
-      border: 1px solid #ddd5ff;
+    header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    .logo {
+      color: var(--primary);
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      margin-top: 28px;
+      padding: 48px 28px;
+      border-radius: 28px;
+      color: white;
+      background: linear-gradient(135deg, #6546e8, #9578ff);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: clamp(27px, 5vw, 42px);
+      line-height: 1.6;
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #f1edff;
+      margin: 0 0 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 12px;
+      padding: 10px 18px;
+      background: var(--primary);
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      filter: brightness(.94);
+    }
+
+    .btn-light {
       background: white;
-      width: 100%;
+      color: var(--primary);
     }
 
-    .quiz {
-      background: white;
-      padding: 24px;
-      border-radius: 18px;
-      margin: 24px 0;
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 20px;
     }
 
-    .question {
-      border-bottom: 1px solid #eee;
-      padding: 15px 0;
+    .stat {
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 12px;
+      border-radius: 14px;
+      text-align: center;
     }
 
-    .answer {
-      display: none;
-      background: #f0ebff;
-      padding: 10px;
-      border-radius: 8px;
-      margin-top: 8px;
+    .stat strong {
+      display: block;
+      font-size: 23px;
     }
 
-    .small {
-      color: #6e6880;
+    section {
+      padding: 34px 0 10px;
+      scroll-margin-top: 90px;
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 4px;
+      font-size: 25px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin: 0;
       font-size: 14px;
     }
 
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      padding: 20px;
+      box-shadow: 0 6px 22px rgba(58,42,110,.04);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .grade-number {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: #eee9ff;
+      color: var(--primary);
+      border-radius: 14px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    select {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 10px;
+      min-width: 145px;
+      color: var(--text);
+    }
+
+    .question {
+      margin-bottom: 14px;
+      padding: 17px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .question h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    .option {
+      display: block;
+      padding: 9px 12px;
+      margin: 7px 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .option:hover {
+      background: #f7f4ff;
+    }
+
+    .option input {
+      margin-left: 8px;
+    }
+
+    .explanation {
+      display: none;
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      background: #effaf5;
+      color: #176b4d;
+      font-size: 14px;
+    }
+
+    .score-box {
+      display: none;
+      margin-top: 15px;
+      background: #eee9ff;
+      border-radius: 14px;
+      padding: 18px;
+      font-weight: bold;
+    }
+
+    .note-content {
+      background: white;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      min-height: 130px;
+    }
+
+    .note-content h3 {
+      color: var(--primary);
+    }
+
+    .note-content li {
+      margin-bottom: 8px;
+    }
+
+    .notice {
+      padding: 13px 15px;
+      background: #fff8df;
+      border: 1px solid #f3e5ad;
+      border-radius: 12px;
+      font-size: 13px;
+      margin-top: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+    }
+
     footer {
-      background: #28213f;
-      color: white;
+      margin-top: 45px;
+      padding: 28px 0;
+      background: #201b3a;
+      color: #e8e3ff;
       text-align: center;
-      padding: 24px 12px;
-      margin-top: 35px;
+      font-size: 13px;
     }
 
     footer p {
-      margin: 4px;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 30px 20px;
+      }
+
+      .stats {
+        gap: 7px;
+      }
+
+      .stat {
+        font-size: 12px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      header, .hero, footer, .no-print, #grades,
+      #quiz, #about, .notice {
+        display: none !important;
+      }
+
+      #notes {
+        display: block !important;
+        padding: 0;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .note-content {
+        border: 0;
+        padding: 0;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "نورا",
+    "alternateName": "نورا | بانک نمونه‌سؤال و آزمون آنلاین",
+    "url": "https://minababayii1369-ctrl.github.io/effective-enigma/",
+    "inLanguage": "fa-IR",
+    "description": "بانک نمونه‌سؤال‌های آموزشی، آزمون آنلاین و جزوه‌های قابل چاپ برای پایه‌های هفتم، هشتم و نهم."
+  }
+  </script>
 </head>
 
 <body>
   <header>
-    <h1>نورا</h1>
-    <p>یادگیری آسان، پیشرفت هر روز</p>
+    <div class="container nav">
+      <a class="logo" href="#home" aria-label="صفحه اصلی نورا">نورا ✦</a>
+
+      <nav class="nav-links" aria-label="منوی اصلی">
+        <a href="#home">خانه</a>
+        <a href="#grades">پایه‌ها</a>
+        <a href="#quiz">آزمون آنلاین</a>
+        <a href="#notes">جزوه قابل چاپ</a>
+        <a href="#about">درباره نورا</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#home">خانه</a>
-    <a href="#lessons">درس‌ها</a>
-    <a href="#questions">نمونه سؤال</a>
-    <a href="#about">درباره نورا</a>
-  </nav>
-
-  <main>
-    <section class="welcome" id="home">
-      <h2>به سایت نورا خوش آمدید!</h2>
+  <main class="container">
+    <section class="hero" id="home">
+      <h1>با نورا، بهتر یاد بگیر!</h1>
       <p>
-        در نورا می‌توانی درس‌هایت را مرور کنی،
-        به سؤال‌ها پاسخ بدهی و آموخته‌هایت را تمرین کنی.
+        نورا؛ بانک نمونه‌سؤال و آزمون آنلاین برای دانش‌آموزان پایه هفتم،
+        هشتم و نهم. تمرین کن، پاسخ‌ها را بررسی کن و برای امتحان آماده شو.
       </p>
-      <a href="#questions">
-        <button>شروع تمرین</button>
-      </a>
+
+      <a class="btn btn-light" href="#grades">شروع یادگیری</a>
+      <a class="btn" href="#quiz">شرکت در آزمون</a>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>۳</strong>
+          پایه تحصیلی
+        </div>
+        <div class="stat">
+          <strong>آنلاین</strong>
+          آزمون خودکار
+        </div>
+        <div class="stat">
+          <strong>رایگان</strong>
+          استفاده از سایت
+        </div>
+      </div>
     </section>
 
-    <section id="lessons">
-      <h2>پایه‌های تحصیلی</h2>
-      <div class="cards">
+    <section id="grades">
+      <div class="section-title">
+        <h2>پایه تحصیلی خود را انتخاب کن</h2>
+        <p>پایه موردنظرت را انتخاب کن و از بخش آزمون و جزوه استفاده کن.</p>
+      </div>
+
+      <div class="grid">
         <article class="card">
-          <h3>📘 پایه هفتم</h3>
-          <p>برای مرور درس‌ها و تمرین بیشتر.</p>
-          <button onclick="chooseGrade('7')">انتخاب پایه هفتم</button>
+          <div class="grade-number">۷</div>
+          <h3>پایه هفتم</h3>
+          <p class="muted">تمرین درس‌های ریاضی، علوم، فارسی و مطالعات اجتماعی.</p>
+          <button class="btn" onclick="chooseGrade(7)">انتخاب پایه هفتم</button>
         </article>
 
         <article class="card">
-          <h3>📗 پایه هشتم</h3>
-          <p>برای آمادگی امتحان و یادگیری بهتر.</p>
-          <button onclick="chooseGrade('8')">انتخاب پایه هشتم</button>
+          <div class="grade-number">۸</div>
+          <h3>پایه هشتم</h3>
+          <p class="muted">مرور مطالب و تمرین سؤال‌های مناسب پایه هشتم.</p>
+          <button class="btn" onclick="chooseGrade(8)">انتخاب پایه هشتم</button>
         </article>
 
         <article class="card">
-          <h3>📙 پایه نهم</h3>
-          <p>برای تمرین درسی و سنجش آموخته‌ها.</p>
-          <button onclick="chooseGrade('9')">انتخاب پایه نهم</button>
+          <div class="grade-number">۹</div>
+          <h3>پایه نهم</h3>
+          <p class="muted">تمرین و مرور درس‌ها برای آمادگی بیشتر در امتحانات.</p>
+          <button class="btn" onclick="chooseGrade(9)">انتخاب پایه نهم</button>
         </article>
       </div>
     </section>
 
-    <section class="quiz" id="questions">
-      <h2>نمونه سؤال‌های نورا</h2>
-      <p>پایه و درس را انتخاب کن تا سؤال‌های تمرینی نمایش داده شوند.</p>
+    <section id="quiz">
+      <div class="section-title">
+        <h2>آزمون آنلاین نورا</h2>
+        <p>پایه و درس را انتخاب کن، جواب بده و در پایان نمره‌ات را ببین.</p>
+      </div>
 
-      <label for="grade">پایه تحصیلی:</label>
-      <select id="grade" onchange="showQuestions()">
-        <option value="7">هفتم</option>
-        <option value="8" selected>هشتم</option>
-        <option value="9">نهم</option>
-      </select>
+      <div class="toolbar no-print">
+        <select id="gradeSelect" aria-label="انتخاب پایه" onchange="renderQuiz()">
+          <option value="7">پایه هفتم</option>
+          <option value="8">پایه هشتم</option>
+          <option value="9">پایه نهم</option>
+        </select>
 
-      <label for="subject">درس:</label>
-      <select id="subject" onchange="showQuestions()">
-        <option value="math">ریاضی</option>
-        <option value="science">علوم</option>
-        <option value="social">مطالعات اجتماعی</option>
-        <option value="persian">فارسی</option>
-      </select>
+        <select id="subjectSelect" aria-label="انتخاب درس" onchange="renderQuiz()">
+          <option value="math">ریاضی</option>
+          <option value="science">علوم</option>
+          <option value="persian">فارسی</option>
+          <option value="social">مطالعات اجتماعی</option>
+        </select>
+      </div>
 
-      <div id="questionList"></div>
+      <div id="quizQuestions"></div>
+
+      <div class="no-print">
+        <button class="btn" onclick="checkAnswers()">ثبت پاسخ‌ها و دیدن نمره</button>
+        <button class="btn" style="background:#77718d" onclick="renderQuiz()">شروع دوباره</button>
+      </div>
+
+      <div id="scoreBox" class="score-box" aria-live="polite"></div>
     </section>
 
-    <section class="welcome" id="about">
-      <h2>درباره نورا</h2>
-      <p>
-        نورا یک سایت آموزشی برای تمرین و مرور درس‌هاست.
-        هدف نورا این است که یادگیری ساده‌تر و تمرین کردن لذت‌بخش‌تر شود.
-      </p>
-      <p class="small">
-        برای پیشنهادها و افزودن سؤال‌های جدید، می‌توانی سایت را در آینده توسعه بدهی.
-      </p>
+    <section id="notes">
+      <div class="section-title">
+        <h2>جزوه‌های آموزشی قابل چاپ</h2>
+        <p>درس موردنظر را انتخاب کن و جزوه را مطالعه یا چاپ کن.</p>
+      </div>
+
+      <div class="toolbar no-print">
+        <select id="noteSelect" aria-label="انتخاب جزوه" onchange="renderNotes()">
+          <option value="math">نکته‌های ریاضی</option>
+          <option value="science">نکته‌های علوم</option>
+          <option value="persian">نکته‌های فارسی</option>
+          <option value="social">نکته‌های مطالعات اجتماعی</option>
+        </select>
+
+        <button class="btn" onclick="printNotes()">چاپ یا ذخیره PDF</button>
+      </div>
+
+      <div id="noteContent" class="note-content"></div>
+
+      <div class="notice">
+        نکته: این مطالب، جزوه‌های کوتاه و عمومی برای مرور هستند.
+        برای امتحان، کتاب درسی و مطالبی را که معلم مشخص کرده نیز بخوان.
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>درباره نورا</h2>
+        <p>یک فضای ساده برای تمرین، مرور و یادگیری بهتر.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="card">
+          <h3>هدف ما چیست؟</h3>
+          <p>
+            هدف نورا این است که دانش‌آموزان بتوانند مطالب درسی را مرور کنند،
+            به سؤال‌های تمرینی پاسخ دهند و با دیدن توضیح جواب‌ها، بهتر یاد بگیرند.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>امکانات نورا</h3>
+          <ul>
+            <li>انتخاب پایه هفتم، هشتم و نهم</li>
+            <li>آزمون چندگزینه‌ای</li>
+            <li>محاسبه خودکار نمره</li>
+            <li>نمایش پاسخ درست و توضیح</li>
+            <li>جزوه‌های قابل چاپ</li>
+          </ul>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>نورا | آموزش و تمرین درسی</p>
-    <p>یادگیری ساده‌تر، آینده روشن‌تر 💜</p>
+    <div class="container">
+      <p><strong>نورا | بانک نمونه‌سؤال و آزمون آنلاین</strong></p>
+      <p>یادگیری بهتر، قدم‌به‌قدم.</p>
+      <p>© <span id="year"></span> نورا</p>
+    </div>
   </footer>
 
   <script>
-    const questions = {
-      "7": {
+    const quizData = {
+      7: {
         math: [
-          {q: "حاصل ۵ + ۷ چیست؟", a: "۱۲"},
-          {q: "حاصل ۶ × ۴ چیست؟", a: "۲۴"},
-          {q: "عدد ۱۵ زوج است یا فرد؟", a: "فرد"}
+          {
+            q: "حاصل ۷ + ۵ کدام است؟",
+            options: ["۱۰", "۱۱", "۱۲", "۱۳"],
+            answer: 2,
+            explanation: "با جمع کردن ۷ و ۵، عدد ۱۲ به دست می‌آید."
+          },
+          {
+            q: "عدد ۳ × ۴ چند می‌شود؟",
+            options: ["۷", "۱۲", "۱۴", "۱۶"],
+            answer: 1,
+            explanation: "سه گروه چهار‌تایی برابر با ۱۲ است."
+          },
+          {
+            q: "کدام عدد زوج است؟",
+            options: ["۳", "۵", "۷", "۸"],
+            answer: 3,
+            explanation: "عدد زوج بر ۲ بخش‌پذیر است؛ ۸ یک عدد زوج است."
+          }
         ],
         science: [
-          {q: "آب از چه عناصری ساخته شده است؟", a: "هیدروژن و اکسیژن"},
-          {q: "زمین به دور چه چیزی می‌چرخد؟", a: "خورشید"},
-          {q: "گیاهان برای رشد به چه چیزهایی نیاز دارند؟", a: "آب، نور، هوا و مواد مغذی"}
-        ],
-        social: [
-          {q: "نقشه چه چیزی را نشان می‌دهد؟", a: "نمایی از مکان‌ها و پدیده‌های جغرافیایی"},
-          {q: "چرا قانون مهم است؟", a: "برای نظم و حفظ حقوق افراد"},
-          {q: "خانواده یکی از چه گروه‌هایی است؟", a: "گروه‌های اجتماعی"}
+          {
+            q: "کدام مورد برای تنفس انسان ضروری است؟",
+            options: ["اکسیژن", "شن", "پلاستیک", "آهن"],
+            answer: 0,
+            explanation: "بدن انسان برای فرایند تنفس به اکسیژن نیاز دارد."
+          },
+          {
+            q: "آب در حالت معمول در چند حالت اصلی دیده می‌شود؟",
+            options: ["یک", "دو", "سه", "چهار"],
+            answer: 2,
+            explanation: "آب به صورت جامد، مایع و گاز وجود دارد."
+          }
         ],
         persian: [
-          {q: "اسم چیست؟", a: "کلمه‌ای برای نامیدن انسان، حیوان، مکان یا چیز"},
-          {q: "مخالف روشن چیست؟", a: "تاریک"},
-          {q: "مترادف شادی چیست؟", a: "خوشحالی"}
+          {
+            q: "کدام گزینه یک اسم است؟",
+            options: ["زیبا", "مدرسه", "دوید", "آرام"],
+            answer: 1,
+            explanation: "مدرسه نام یک مکان است؛ پس اسم محسوب می‌شود."
+          },
+          {
+            q: "مخالف کلمه «روشن» چیست؟",
+            options: ["نورانی", "درخشان", "تاریک", "سفید"],
+            answer: 2,
+            explanation: "تاریک از نظر معنی مخالف روشن است."
+          }
+        ],
+        social: [
+          {
+            q: "نقشه برای چه کاری استفاده می‌شود؟",
+            options: ["نمایش مکان‌ها", "پخت غذا", "اندازه‌گیری دما", "نوشتن شعر"],
+            answer: 0,
+            explanation: "نقشه، نمایش ساده‌شده‌ای از مکان‌ها و بخش‌هایی از سطح زمین است."
+          },
+          {
+            q: "کدام مورد نمونه‌ای از همکاری اجتماعی است؟",
+            options: ["بی‌توجهی به دیگران", "کمک به هم‌کلاسی", "خراب کردن وسایل", "رعایت نکردن قانون"],
+            answer: 1,
+            explanation: "کمک به هم‌کلاسی نمونه‌ای از همکاری و مسئولیت‌پذیری است."
+          }
         ]
       },
-      "8": {
+
+      8: {
         math: [
-          {q: "حاصل ۳² چیست؟", a: "۹"},
-          {q: "اگر x + ۵ = ۱۲ باشد، x چند است؟", a: "۷"},
-          {q: "مجموع زاویه‌های داخلی مثلث چند درجه است؟", a: "۱۸۰ درجه"}
+          {
+            q: "حاصل ۲ به توان ۳ چیست؟",
+            options: ["۶", "۸", "۹", "۱۲"],
+            answer: 1,
+            explanation: "۲ به توان ۳ یعنی ۲ × ۲ × ۲ که برابر با ۸ است."
+          },
+          {
+            q: "اگر x + ۴ = ۹ باشد، x چند است؟",
+            options: ["۳", "۴", "۵", "۶"],
+            answer: 2,
+            explanation: "با کم کردن ۴ از دو طرف، x = ۵ به دست می‌آید."
+          },
+          {
+            q: "مجموع زاویه‌های داخلی مثلث چند درجه است؟",
+            options: ["۹۰", "۱۸۰", "۲۷۰", "۳۶۰"],
+            answer: 1,
+            explanation: "مجموع زاویه‌های داخلی هر مثلث ۱۸۰ درجه است."
+          }
         ],
         science: [
-          {q: "واحد اندازه‌گیری نیرو چیست؟", a: "نیوتون"},
-          {q: "ذره با بار منفی در اتم چیست؟", a: "الکترون"},
-          {q: "تغییر حالت مایع به گاز چه نام دارد؟", a: "تبخیر"}
-        ],
-        social: [
-          {q: "قانون اساسی چیست؟", a: "قانون اصلی کشور که ساختار و اصول حکومت را مشخص می‌کند."},
-          {q: "چرا مشارکت اجتماعی اهمیت دارد؟", a: "به بهتر شدن جامعه و همکاری مردم کمک می‌کند."},
-          {q: "یکی از منابع طبیعی را نام ببر.", a: "آب، خاک، جنگل یا نفت"}
+          {
+            q: "واحد اندازه‌گیری نیرو چیست؟",
+            options: ["متر", "ثانیه", "نیوتون", "لیتر"],
+            answer: 2,
+            explanation: "نیرو با واحد نیوتون اندازه‌گیری می‌شود."
+          },
+          {
+            q: "کدام اندام خون را در بدن به گردش درمی‌آورد؟",
+            options: ["معده", "قلب", "ریه", "پوست"],
+            answer: 1,
+            explanation: "قلب با انقباض‌های خود خون را پمپاژ می‌کند."
+          }
         ],
         persian: [
-          {q: "مخالف دانا چیست؟", a: "نادان"},
-          {q: "فعل در جمله چه چیزی را نشان می‌دهد؟", a: "کار یا حالت را"},
-          {q: "مترادف کوشش چیست؟", a: "تلاش"}
+          {
+            q: "کدام واژه از نظر معنی به «کوشش» نزدیک‌تر است؟",
+            options: ["تلاش", "آرامش", "اندوه", "سکوت"],
+            answer: 0,
+            explanation: "کوشش و تلاش معنی نزدیک به هم دارند."
+          },
+          {
+            q: "کدام گزینه فعل است؟",
+            options: ["کتاب", "زیبا", "می‌نویسد", "دانش‌آموز"],
+            answer: 2,
+            explanation: "«می‌نویسد» انجام کار را نشان می‌دهد و فعل است."
+          }
+        ],
+        social: [
+          {
+            q: "قانون در جامعه چه کمکی می‌کند؟",
+            options: ["ایجاد نظم", "افزایش بی‌نظمی", "حذف همکاری", "جلوگیری از یادگیری"],
+            answer: 0,
+            explanation: "قوانین به تنظیم روابط و حفظ نظم جامعه کمک می‌کنند."
+          },
+          {
+            q: "کدام مورد نمونه‌ای از منابع طبیعی است؟",
+            options: ["نفت", "دفتر", "مداد", "صندلی"],
+            answer: 0,
+            explanation: "نفت یکی از منابع طبیعی زمین است."
+          }
         ]
       },
-      "9": {
+
+      9: {
         math: [
-          {q: "حاصل ۲ به توان ۴ چیست؟", a: "۱۶"},
-          {q: "اگر ۲x = ۱۸ باشد، x چند است؟", a: "۹"},
-          {q: "جذر ۸۱ چیست؟", a: "۹"}
+          {
+            q: "اگر x = ۳ باشد، مقدار ۲x + ۱ چند است؟",
+            options: ["۵", "۶", "۷", "۸"],
+            answer: 2,
+            explanation: "به‌جای x عدد ۳ می‌گذاریم: ۲ × ۳ + ۱ = ۷."
+          },
+          {
+            q: "ریشه دوم ۸۱ کدام است؟",
+            options: ["۷", "۸", "۹", "۱۰"],
+            answer: 2,
+            explanation: "۹ × ۹ = ۸۱، پس ریشه دوم اصلی ۸۱ برابر ۹ است."
+          },
+          {
+            q: "احتمال رخ دادن یک پیشامد غیرممکن چقدر است؟",
+            options: ["۰", "۱/۲", "۱", "۲"],
+            answer: 0,
+            explanation: "احتمال پیشامد غیرممکن برابر صفر است."
+          }
         ],
         science: [
-          {q: "واحد اندازه‌گیری انرژی چیست؟", a: "ژول"},
-          {q: "سلول چیست؟", a: "واحد بنیادی ساختار و عملکرد جانداران"},
-          {q: "نیروی اصطکاک معمولاً با حرکت چگونه برخورد می‌کند؟", a: "با آن مخالفت می‌کند"}
-        ],
-        social: [
-          {q: "شهروندی به چه معناست؟", a: "داشتن حقوق و مسئولیت‌های یک فرد در جامعه"},
-          {q: "چرا منابع طبیعی باید حفظ شوند؟", a: "برای نیازهای امروز و نسل‌های آینده"},
-          {q: "یکی از وظایف شهروندان را بگو.", a: "رعایت قانون و احترام به حقوق دیگران"}
+          {
+            q: "واحد اصلی اندازه‌گیری جریان الکتریکی چیست؟",
+            options: ["ولت", "آمپر", "اهم", "وات"],
+            answer: 1,
+            explanation: "جریان الکتریکی با آمپر اندازه‌گیری می‌شود."
+          },
+          {
+            q: "کدام ذره بار منفی دارد؟",
+            options: ["پروتون", "نوترون", "الکترون", "هسته"],
+            answer: 2,
+            explanation: "الکترون دارای بار الکتریکی منفی است."
+          }
         ],
         persian: [
-          {q: "مخالف پیروزی چیست؟", a: "شکست"},
-          {q: "تشبیه چیست؟", a: "مانند کردن چیزی به چیز دیگر به دلیل داشتن ویژگی مشترک"},
-          {q: "مترادف اندیشه چیست؟", a: "فکر"}
+          {
+            q: "کدام گزینه هم‌معنی «شجاع» است؟",
+            options: ["ترسو", "دلیر", "غمگین", "خسته"],
+            answer: 1,
+            explanation: "شجاع و دلیر معنی نزدیک به هم دارند."
+          },
+          {
+            q: "در جمله «دانش‌آموز کتاب را خواند»، فعل کدام است؟",
+            options: ["دانش‌آموز", "کتاب", "را", "خواند"],
+            answer: 3,
+            explanation: "«خواند» فعل جمله است و انجام کار را نشان می‌دهد."
+          }
+        ],
+        social: [
+          {
+            q: "کدام مورد به حفظ محیط زیست کمک می‌کند؟",
+            options: ["ریختن زباله در طبیعت", "صرفه‌جویی در آب", "قطع بی‌رویه درختان", "آلوده کردن رودخانه"],
+            answer: 1,
+            explanation: "صرفه‌جویی در آب به حفظ منابع طبیعی کمک می‌کند."
+          },
+          {
+            q: "چرا مشارکت شهروندان اهمیت دارد؟",
+            options: ["برای همکاری در امور جامعه", "برای افزایش اختلاف", "برای بی‌توجهی به قانون", "برای حذف مسئولیت"],
+            answer: 0,
+            explanation: "مشارکت شهروندان به حل مسائل و بهتر شدن زندگی اجتماعی کمک می‌کند."
+          }
         ]
       }
     };
 
-    const subjectNames = {
-      math: "ریاضی",
-      science: "علوم",
-      social: "مطالعات اجتماعی",
-      persian: "فارسی"
-    };
-
-    function chooseGrade(grade) {
-      document.getElementById("grade").value = grade;
-      document.getElementById("questions").scrollIntoView({
-        behavior: "smooth"
-      });
-      showQuestions();
-    }
-
-    function showQuestions() {
-      const grade = document.getElementById("grade").value;
-      const subject = document.getElementById("subject").value;
-      const list = document.getElementById("questionList");
-      const items = questions[grade][subject];
-
-      list.innerHTML = "<h3>پایه " + grade +
-        " — درس " + subjectNames[subject] + "</h3>";
-
-      items.forEach((item, index) => {
-        const box = document.createElement("div");
-        box.className = "question";
-
-        const title = document.createElement("p");
-        title.textContent = (index + 1) + ". " + item.q;
-
-        const button = document.createElement("button");
-        button.textContent = "نمایش پاسخ";
-
-        const answer = document.createElement("div");
-        answer.className = "answer";
-        answer.textContent = "پاسخ: " + item.a;
-
-        button.onclick = function() {
-          const isVisible = answer.style.display === "block";
-          answer.style.display = isVisible ? "none" : "block";
-          button.textContent = isVisible ? "نمایش پاسخ" : "پنهان کردن پاسخ";
-        };
-
-        box.appendChild(title);
-        box.appendChild(button);
-        box.appendChild(answer);
-        list.appendChild(box);
-      });
-    }
-
-    showQuestions();
-  </script>
-</body>
-        </html>
+    const noteData = {
+      math: {
+        title: "جزوه کوتاه ریاضی",
+        items: [
+          "در جمع و تفریق اعداد منفی، به علامت عددها توجه کن.",
+          "در معادله، برای پیدا کردن مجهول از عملیات معکوس استفاده کن.",
+          "مجموع زاویه‌های داخلی مثلث ۱۸۰ درجه است.",
+          "محیط مستطیل برابر است با دو برابر مجموع طول و عرض.",
+          "برای حل مسئله، داده‌ها و خواسته سؤال را مشخص کن."
+    
