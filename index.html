@@ -4,290 +4,676 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>بانک نمونه سؤالات متوسطه اول</title>
-<meta name="description" content="نمونه سؤالات امتحانی پایه هفتم، هشتم و نهم همراه با پاسخ برای تمرین و آمادگی امتحانات.">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="نورا؛ بانک نمونه سوالات، گام به گام، جزوه و آزمون آنلاین پایه هفتم، هشتم و نهم">
+<title>نورا | مرجع یادگیری و نمونه سؤال</title>
 
 <style>
-* { box-sizing: border-box; }
-
+:root {
+  --blue:#1768b5;
+  --green:#139d78;
+  --navy:#183451;
+  --bg:#f4f8fc;
+  --white:#fff;
+  --muted:#718096;
+  --border:#e4ebf4;
+  --shadow:0 5px 22px rgba(26,64,105,.055);
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
 body {
-  margin: 0;
-  font-family: Tahoma, Arial, sans-serif;
-  background: #f1f5f9;
-  color: #172033;
-  line-height: 2;
+  margin:0;
+  background:var(--bg);
+  color:#243751;
+  font-family:Tahoma,Arial,sans-serif;
+  font-size:14px;
+  line-height:1.9;
 }
-
+button,input,select {font:inherit}
+button {cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible {
+  outline:2px solid var(--blue);
+  outline-offset:3px
+}
+a {color:inherit;text-decoration:none}
 header {
-  background: #123b70;
-  color: white;
-  padding: 25px 15px;
-  text-align: center;
+  background:white;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:10
 }
-
-header h1 { margin: 0; font-size: 25px; }
-header p { margin-bottom: 0; color: #dbeafe; }
-
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
+.topbar {
+  max-width:1240px;
+  margin:auto;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px
 }
-
+.brand {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:27px;
+  font-weight:bold;
+  color:var(--blue);
+  white-space:nowrap
+}
+.brand-icon {
+  display:grid;
+  place-items:center;
+  width:43px;height:43px;
+  border-radius:13px;
+  background:#e8f5ff;
+  font-size:25px
+}
+nav {display:flex;align-items:center;gap:17px}
+nav a {font-size:12px;color:#44536c;white-space:nowrap}
+nav a:hover {color:var(--green)}
+.login {
+  background:var(--green);
+  color:white;
+  border:0;
+  border-radius:11px;
+  padding:10px 15px;
+  white-space:nowrap
+}
+main {max-width:1240px;margin:auto;padding:22px 20px 45px}
+.hero {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:20px;
+  min-height:270px;
+  padding:30px;
+  border-radius:20px;
+  overflow:hidden;
+  background:linear-gradient(120deg,#dff7f0,#e4f2ff);
+  border:1px solid #d6eee8
+}
+.hero h1 {font-size:30px;color:var(--navy);margin:0 0 8px}
+.hero p {color:#52677c;margin:0 0 18px}
+.hero-art {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:185px;
+  font-size:100px;
+  background:radial-gradient(ellipse,#c3eee4 0%,transparent 70%)
+}
+.searchbox {
+  display:flex;
+  background:white;
+  padding:5px;
+  border:1px solid #e2e9f3;
+  border-radius:13px;
+  max-width:570px
+}
+.searchbox input {
+  width:100%;min-width:0;
+  border:0;outline:0;
+  padding:10px;
+  background:transparent
+}
+.primary {
+  background:var(--blue);
+  color:white;
+  border:0;
+  border-radius:9px;
+  padding:10px 16px
+}
+.section-title {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:25px 0 12px
+}
+.section-title h2 {font-size:19px;margin:0;color:var(--navy)}
+.linkbtn {
+  background:none;border:0;color:var(--blue);
+  font-size:12px
+}
+.grades {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:15px
+}
+.grade {
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:20px;
+  text-align:right;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  transition:.18s;
+  cursor:pointer
+}
+.grade:nth-child(1){background:#e8f4ff}
+.grade:nth-child(2){background:#e7f7ed}
+.grade:nth-child(3){background:#fff0eb}
+.grade:hover,.grade.active {
+  box-shadow:var(--shadow);
+  border-color:#81b9ee;
+  transform:translateY(-2px)
+}
+.grade h3 {font-size:18px;margin:0;color:var(--navy)}
+.grade p {margin:5px 0 0;color:#62758a;font-size:12px}
+.grade-icon {
+  display:grid;place-items:center;
+  width:47px;height:47px;
+  border-radius:50%;
+  background:white;font-size:24px
+}
+.quick {
+  background:#f7faff;
+  border:1px solid var(--border);
+  padding:14px;
+  border-radius:15px;
+  margin-top:23px
+}
+.quick h3 {margin:0 0 10px;font-size:16px}
+.quick-grid {
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px
+}
+.quick-item {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px 5px;
+  text-align:center;
+  color:#31506e;
+  cursor:pointer
+}
+.quick-item:hover {border-color:#88b8e8;background:#f0f8ff}
+.quick-item span {display:block;font-size:26px}
+.quick-item b {font-size:12px}
+.content-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1.8fr) minmax(260px,.8fr);
+  gap:18px;
+  margin-top:22px
+}
 .panel {
-  background: white;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 15px;
-  box-shadow: 0 3px 12px #0000000d;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:18px;
+  margin-bottom:16px;
+  box-shadow:var(--shadow)
 }
-
-h2 { color: #123b70; font-size: 21px; }
-
-select, input, button {
-  font-family: inherit;
-  font-size: 15px;
-  padding: 12px;
-  border-radius: 9px;
+.panel-heading {
+  display:flex;align-items:center;
+  justify-content:space-between;gap:8px;
+  margin-bottom:14px
 }
-
-select, input {
-  width: 100%;
-  border: 1px solid #cbd5e1;
-  background: white;
-  margin: 5px 0 15px;
+.panel-heading h2,.panel-heading h3 {margin:0;font-size:17px}
+.subjects {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px
 }
-
-button {
-  border: none;
-  background: #1769aa;
-  color: white;
-  cursor: pointer;
+.subject {
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:13px 7px;
+  text-align:center;
+  cursor:pointer;
+  background:#f9fbff
 }
-
-button:hover { background: #104c80; }
-
-.question {
-  padding: 15px 0;
-  border-bottom: 1px solid #e2e8f0;
+.subject span {display:block;font-size:28px}
+.subject b {font-size:12px}
+.subject:hover,.subject.active {
+  background:#eaf4ff;border-color:#8ebbe9
 }
-
-.question:last-child { border-bottom: none; }
-
-.question p { font-weight: bold; }
-
-.answer {
-  display: none;
-  background: #ecfdf5;
-  border-right: 4px solid #16a34a;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 7px;
+.question-row {
+  border:1px solid var(--border);
+  border-radius:11px;
+  padding:12px;
+  margin-top:9px
 }
-
+.question-top {
+  display:flex;align-items:flex-start;
+  justify-content:space-between;gap:8px
+}
+.question-top p {margin:0;font-weight:bold;flex:1}
+.tag {
+  background:#e9f3ff;
+  color:#1b68aa;
+  border-radius:7px;
+  padding:3px 7px;
+  font-size:11px;
+  white-space:nowrap
+}
+.row-actions {display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
 .small {
-  font-size: 13px;
-  color: #64748b;
+  background:white;
+  color:var(--blue);
+  border:1px solid #d8e6f6;
+  border-radius:8px;
+  padding:6px 10px;
+  font-size:12px
 }
-
+.small:hover {background:#f0f7ff}
+.answer {
+  display:none;
+  margin-top:11px;
+  padding:11px;
+  border-radius:9px;
+  background:#effaf3;
+  color:#286345
+}
+.answer.show {display:block}
+.banner {
+  background:linear-gradient(130deg,#fce8f5,#f0e8ff);
+  border:1px solid #eedaf5;
+  border-radius:14px;
+  padding:19px;
+  margin-bottom:15px
+}
+.banner h3 {margin:0 0 5px;font-size:19px}
+.banner p {margin:0 0 10px;color:#66536e;font-size:12px}
+.banner button {background:#7047d6}
+.article {
+  display:block;
+  width:100%;
+  padding:12px 0;
+  background:none;
+  border:0;
+  border-bottom:1px solid #edf1f7;
+  text-align:right;
+  color:#3e5675
+}
+.article:last-child {border-bottom:0}
+.article:hover {color:var(--blue)}
+.article small {display:block;color:var(--muted)}
+.quiz-question {font-weight:bold;margin:8px 0}
+.option {
+  display:block;
+  width:100%;
+  text-align:right;
+  padding:10px;
+  margin:7px 0;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:9px
+}
+.option.selected {background:#eaf3ff;border-color:var(--blue)}
+.option.correct {background:#e8f8ed;border-color:#30a46c}
+.option.wrong {background:#fff0f0;border-color:#dc6868}
+.option:disabled {cursor:default}
+.notice {
+  padding:10px;
+  margin-top:10px;
+  background:#f0f7ff;
+  border-radius:9px;
+  font-size:12px
+}
+.hidden {display:none!important}
+.empty {padding:20px;text-align:center;color:var(--muted)}
 footer {
-  text-align: center;
-  padding: 20px;
-  color: #64748b;
+  background:#193c60;color:white;
+  padding:25px 20px;
+  text-align:center
 }
-
-@media(max-width: 500px) {
-  main { padding: 10px; }
-  .panel { padding: 15px; }
-  header h1 { font-size: 21px; }
+footer p {margin:5px;font-size:12px;color:#d5e3f1}
+footer a {text-decoration:underline}
+@media(max-width:900px) {
+  nav {gap:9px}
+  nav a {font-size:11px}
+  .topbar {gap:10px}
+  .login {padding:8px}
+  .content-grid {grid-template-columns:1fr}
+}
+@media(max-width:650px) {
+  .topbar {flex-wrap:wrap;padding:10px 12px}
+  .brand {font-size:23px}
+  nav {
+    order:3;width:100%;
+    overflow-x:auto;padding:4px 0
+  }
+  nav a {font-size:12px}
+  main {padding:13px 11px 30px}
+  .hero {
+    grid-template-columns:1fr;
+    padding:21px;
+    gap:0
+  }
+  .hero h1 {font-size:23px}
+  .hero-art {min-height:105px;font-size:70px;grid-row:1}
+  .grades {gap:7px}
+  .grade {padding:11px 8px;display:block}
+  .grade h3 {font-size:13px}
+  .grade p {font-size:10px}
+  .grade-icon {width:35px;height:35px;font-size:19px;margin-bottom:8px}
+  .quick-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .content-grid {gap:8px}
+  .panel {padding:13px}
+  .subjects {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .question-top {flex-wrap:wrap}
+  .section-title h2 {font-size:17px}
 }
 </style>
 </head>
 
 <body>
-
 <header>
-  <h1>📚 بانک نمونه سؤالات امتحانی</h1>
-  <p>متوسطه اول | پایه هفتم، هشتم و نهم</p>
+  <div class="topbar">
+    <a class="brand" href="#" onclick="resetHome();return false">
+      <span class="brand-icon">📖</span> نورا
+    </a>
+    <nav>
+      <a href="#" onclick="resetHome();return false">صفحه اصلی</a>
+      <a href="#subjects">درس‌ها</a>
+      <a href="#questions">نمونه سؤال</a>
+      <a href="#quiz">آزمون آنلاین</a>
+      <a href="#quick">گام‌به‌گام</a>
+      <a href="#articles">مطالب آموزشی</a>
+    </nav>
+    <button class="login" onclick="showProfile()">👤 پیشرفت من</button>
+  </div>
 </header>
 
 <main>
+  <section class="hero">
+    <div>
+      <h1>با نورا، بهتر یاد بگیر!</h1>
+      <p>همراه یادگیری تو؛ از تمرین روزانه تا آمادگی امتحانات هفتم، هشتم و نهم.</p>
+      <div class="searchbox">
+        <input id="search" placeholder="نام درس، فصل یا سؤال را جست‌وجو کن..."
+          oninput="renderQuestions()">
+        <button class="primary" onclick="goQuestions()">جست‌وجو</button>
+      </div>
+    </div>
+    <div class="hero-art" aria-label="کتاب و یادگیری">📚💡</div>
+  </section>
 
-  <div class="panel">
-    <h2>🔎 پیدا کردن نمونه سؤال</h2>
-
-    <label for="grade">پایه تحصیلی:</label>
-    <select id="grade">
-      <option value="7">هفتم</option>
-      <option value="8">هشتم</option>
-      <option value="9">نهم</option>
-    </select>
-
-    <label for="subject">درس:</label>
-    <select id="subject">
-      <option value="math">ریاضی</option>
-      <option value="science">علوم</option>
-      <option value="study">مطالعات اجتماعی</option>
-      <option value="persian">فارسی</option>
-    </select>
-
-    <button onclick="showQuestions()">نمایش نمونه سؤالات</button>
+  <div class="section-title">
+    <h2>پایه تحصیلی خود را انتخاب کن</h2>
   </div>
 
-  <div class="panel">
-    <h2 id="resultTitle">نمونه سؤالات ریاضی هفتم</h2>
-    <p class="small">برای دیدن پاسخ هر سؤال، روی دکمه «نمایش پاسخ» بزن.</p>
-    <div id="questions"></div>
-  </div>
+  <section class="grades">
+    <button class="grade active" onclick="setGrade(7,this)">
+      <div>
+        <h3>پایه هفتم</h3>
+        <p>درس و تمرین و نمونه‌سؤال</p>
+      </div>
+      <span class="grade-icon">📘</span>
+    </button>
+    <button class="grade" onclick="setGrade(8,this)">
+      <div>
+        <h3>پایه هشتم</h3>
+        <p>درس و تمرین و نمونه‌سؤال</p>
+      </div>
+      <span class="grade-icon">📗</span>
+    </button>
+    <button class="grade" onclick="setGrade(9,this)">
+      <div>
+        <h3>پایه نهم</h3>
+        <p>درس و تمرین و نمونه‌سؤال</p>
+      </div>
+      <span class="grade-icon">📙</span>
+    </button>
+  </section>
 
+  <section class="quick" id="quick">
+    <h3>دسترسی سریع</h3>
+    <div class="quick-grid">
+      <button class="quick-item" onclick="goQuestions()">
+        <span>📝</span><b>نمونه سؤال</b>
+      </button>
+      <button class="quick-item" onclick="goQuiz()">
+        <span>🎯</span><b>آزمون آنلاین</b>
+      </button>
+      <button class="quick-item" onclick="showGuide()">
+        <span>📖</span><b>گام‌به‌گام</b>
+      </button>
+      <button class="quick-item" onclick="showNotes()">
+        <span>📒</span><b>جزوه‌ها</b>
+      </button>
+      <button class="quick-item" onclick="showFavorites()">
+        <span>⭐</span><b>علاقه‌مندی‌ها</b>
+      </button>
+    </div>
+  </section>
+
+  <div class="content-grid">
+    <div>
+      <section class="panel" id="subjects">
+        <div class="panel-heading">
+          <h2>📚 درس‌های پرطرفدار</h2>
+          <button class="linkbtn" onclick="selectAllSubjects()">همه درس‌ها ←</button>
+        </div>
+        <div class="subjects">
+          <button class="subject" onclick="setSubject('ریاضی')">
+            <span>🔢</span><b>ریاضی</b>
+          </button>
+          <button class="subject" onclick="setSubject('علوم')">
+            <span>🧪</span><b>علوم تجربی</b>
+          </button>
+          <button class="subject" onclick="setSubject('فارسی')">
+            <span>📕</span><b>فارسی</b>
+          </button>
+          <button class="subject" onclick="setSubject('مطالعات اجتماعی')">
+            <span>🌍</span><b>مطالعات اجتماعی</b>
+          </button>
+          <button class="subject" onclick="setSubject('زبان انگلیسی')">
+            <span>🔤</span><b>زبان انگلیسی</b>
+          </button>
+          <button class="subject" onclick="setSubject('عربی')">
+            <span>📗</span><b>عربی</b>
+          </button>
+        </div>
+      </section>
+
+      <section class="panel" id="questions">
+        <div class="panel-heading">
+          <h2>📝 نمونه سؤال‌های آموزشی</h2>
+          <span class="tag" id="gradeLabel">پایه هفتم</span>
+        </div>
+        <div class="searchbox" style="margin-bottom:12px">
+          <input id="filter" placeholder="جست‌وجو در سؤال‌ها..."
+            oninput="renderQuestions()">
+          <button class="primary" onclick="clearFilters()">پاک‌کردن</button>
+        </div>
+        <div id="questionList"></div>
+      </section>
+
+      <section class="panel" id="quiz">
+        <div class="panel-heading">
+          <h2>🎯 آزمون آنلاین</h2>
+          <span class="tag">نمره از ۲۰</span>
+        </div>
+        <p>به پرسش‌های چهارگزینه‌ای پاسخ بده و نتیجه‌ات را ببین.</p>
+        <div id="quizInfo" class="notice">برای شروع آزمون روی دکمه زیر بزن.</div>
+        <div id="quizArea"></div>
+        <div id="quizResult" class="notice hidden"></div>
+        <div class="row-actions">
+          <button class="primary" id="nextBtn" onclick="nextQuestion()">شروع آزمون</button>
+          <button class="small hidden" id="restartBtn" onclick="startQuiz()">آزمون دوباره</button>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="guidePanel">
+        <div class="panel-heading"><h2>📖 راهنمای گام‌به‌گام</h2></div>
+        <p>برای حل تمرین‌ها، ابتدا صورت سؤال را دقیق بخوان، اطلاعات داده‌شده را مشخص کن و بعد مرحله‌به‌مرحله حل کن.</p>
+        <p>این بخش فعلاً راهنمای عمومی است. برای گام‌به‌گام کامل هر درس باید محتوای همان درس اضافه شود.</p>
+      </section>
+
+      <section class="panel hidden" id="notesPanel">
+        <div class="panel-heading"><h2>📒 جزوه‌ها و منابع</h2></div>
+        <p>هنوز فایلی به این بخش اضافه نشده است. می‌توانی بعداً لینک PDF جزوه‌های خودت را در کد قرار بدهی.</p>
+      </section>
+
+      <section class="panel hidden" id="favoritesPanel">
+        <div class="panel-heading"><h2>⭐ سؤال‌های مورد علاقه</h2></div>
+        <div id="favoriteList"></div>
+      </section>
+    </div>
+
+    <aside>
+      <section class="banner">
+        <h3>آزمون آنلاین نورا</h3>
+        <p>تمرین کن، پاسخ درست را ببین و نمره‌ات را محاسبه کن.</p>
+        <button class="primary" onclick="goQuiz()">شروع آزمون ←</button>
+      </section>
+
+      <section class="panel" id="articles">
+        <div class="panel-heading"><h3>📌 مطالب آموزشی</h3></div>
+        <button class="article" onclick="openArticle(0)">
+          روش درست مطالعه برای امتحان
+          <small>برنامه‌ریزی و مرور</small>
+        </button>
+        <button class="article" onclick="openArticle(1)">
+          چطور ریاضی را بهتر یاد بگیریم؟
+          <small>تمرین و حل مسئله</small>
+        </button>
+        <button class="article" onclick="openArticle(2)">
+          چگونه از اشتباهات درس بگیریم؟
+          <small>مرور پاسخ‌ها</small>
+        </button>
+        <div id="articleContent" class="notice hidden"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading"><h3>📊 پیشرفت تو</h3></div>
+        <p>آخرین نمره آزمون:</p>
+        <h2 id="lastScore">هنوز آزمونی ثبت نشده</h2>
+        <button class="small" onclick="showProfile()">نمایش اطلاعات</button>
+        <p style="font-size:11px;color:#718096">
+          اطلاعات این نسخه فقط روی همین دستگاه ذخیره می‌شوند.
+        </p>
+      </section>
+    </aside>
+  </div>
 </main>
 
 <footer>
-  بانک نمونه سؤالات متوسطه اول | موفق باشی! 🌟
+  <div class="brand" style="justify-content:center;color:white">📖 نورا</div>
+  <p>بانک نمونه‌سؤال و تمرین آموزشی پایه هفتم، هشتم و نهم</p>
+  <p>تمام حقوق این نسخه متعلق به پروژه نورا است.</p>
 </footer>
 
 <script>
-const data = {
-  7: {
-    math: [
-      ["حاصل ۱۲ + ۸ × ۲ را حساب کنید.", "۲۸؛ ابتدا ضرب انجام می‌شود."],
-      ["عدد منفی ۵ را با علامت ریاضی بنویسید.", "۵- یا ‎−۵"],
-      ["محیط مربعی با ضلع ۴ سانتی‌متر چقدر است؟", "۱۶ سانتی‌متر؛ ۴ × ۴"],
-      ["کسر ۲/۴ را ساده کنید.", "۱/۲"],
-      ["اگر x + ۳ = ۱۰ باشد، x چند است؟", "x = ۷"]
-    ],
-    science: [
-      ["کوچک‌ترین واحد سازنده مواد چیست؟", "اتم، یکی از واحدهای سازنده مواد است."],
-      ["سه حالت اصلی ماده را نام ببرید.", "جامد، مایع و گاز."],
-      ["گیاهان برای فتوسنتز به چه چیزهایی نیاز دارند؟", "نور، آب، دی‌اکسید کربن و مواد لازم برای فرایند."],
-      ["دماسنج برای اندازه‌گیری چه چیزی است؟", "دما."],
-      ["نیرو می‌تواند چه اثری بر جسم داشته باشد؟", "می‌تواند حرکت، سرعت، جهت یا شکل جسم را تغییر دهد."]
-    ],
-    study: [
-      ["نقشه چیست؟", "نمایش کوچک‌شده سطح زمین یا بخشی از آن روی یک سطح."],
-      ["چرا به قانون نیاز داریم؟", "برای نظم، حفظ حقوق افراد و زندگی بهتر در جامعه."],
-      ["دو مورد از منابع طبیعی را نام ببرید.", "آب و خاک."],
-      ["خانواده چه نقشی در زندگی دارد؟", "مراقبت، تربیت و حمایت از اعضا."],
-      ["جهت‌های اصلی جغرافیایی را نام ببرید.", "شمال، جنوب، شرق و غرب."]
-    ],
-    persian: [
-      ["اسم چیست؟", "کلمه‌ای که نام شخص، حیوان، مکان یا چیز را بیان می‌کند."],
-      ["مترادف کلمه شاد چیست؟", "خوشحال."],
-      ["مخالف کلمه تاریک چیست؟", "روشن."],
-      ["فعل چه چیزی را نشان می‌دهد؟", "انجام کار یا روی دادن حالت در زمان."],
-      ["یک جمله پرسشی بنویسید.", "امروز چه روزی است؟"]
-    ]
-  },
+"use strict";
 
-  8: {
-    math: [
-      ["حاصل ۳² + ۴ را به دست آورید.", "۱۳؛ زیرا ۳² برابر ۹ است."],
-      ["اگر ۲x = ۱۸ باشد، x چند است؟", "x = ۹"],
-      ["جذر ۸۱ چند است؟", "۹"],
-      ["مجموع زاویه‌های داخلی مثلث چند درجه است؟", "۱۸۰ درجه."],
-      ["حاصل ۳/۴ + ۱/۴ چیست؟", "۱"]
-    ],
-    science: [
-      ["وظیفه گلبول‌های قرمز چیست؟", "حمل اکسیژن در خون."],
-      ["واحد اندازه‌گیری نیرو چیست؟", "نیوتون."],
-      ["تفاوت تغییر فیزیکی و شیمیایی چیست؟", "در تغییر شیمیایی ماده جدیدی تشکیل می‌شود؛ در تغییر فیزیکی معمولاً نه."],
-      ["الکتریسیته ساکن چیست؟", "تجمع بارهای الکتریکی روی سطح جسم."],
-      ["وظیفه دستگاه تنفس چیست؟", "دریافت اکسیژن و دفع دی‌اکسید کربن."]
-    ],
-    study: [
-      ["قوه مقننه چه وظیفه‌ای دارد؟", "قانون‌گذاری."],
-      ["چرا باید در مصرف آب صرفه‌جویی کنیم؟", "چون آب شیرین محدود و برای زندگی ضروری است."],
-      ["دو عامل مؤثر بر آب‌وهوا را نام ببرید.", "عرض جغرافیایی و ارتفاع از سطح دریا."],
-      ["شهروند مسئول چه کسی است؟", "کسی که حقوق دیگران و قوانین را رعایت می‌کند."],
-      ["میراث فرهنگی چیست؟", "آثار و ارزش‌های فرهنگی به‌جامانده از گذشته."]
-    ],
-    persian: [
-      ["تشبیه چیست؟", "مانند کردن چیزی به چیز دیگر به دلیل یک ویژگی مشترک."],
-      ["مخالف واژه امید چیست؟", "ناامیدی."],
-      ["قافیه چیست؟", "واژه‌های هم‌آوا در پایان مصراع‌ها یا بیت‌ها."],
-      ["یک جمله با فعل گذشته بنویسید.", "من دیروز کتاب خواندم."],
-      ["منظور از واژه هم‌خانواده چیست؟", "واژه‌هایی که ریشه مشترک دارند."]
-    ]
-  },
+const data = [
+ {id:1,g:7,s:"ریاضی",q:"حاصل عبارت ۳ × (۴ + ۲) چند است؟",
+  a:"ابتدا پرانتز را حساب می‌کنیم: ۴ + ۲ = ۶. سپس ۳ × ۶ = ۱۸."},
+ {id:2,g:7,s:"علوم",q:"اتم چیست؟",
+  a:"اتم واحد بنیادی سازنده عنصرهای شیمیایی است."},
+ {id:3,g:7,s:"فارسی",q:"اسم چیست؟",
+  a:"اسم واژه‌ای است که برای نامیدن شخص، حیوان، مکان، چیز یا مفهوم استفاده می‌شود."},
+ {id:4,g:7,s:"مطالعات اجتماعی",q:"چرا رعایت قانون مهم است؟",
+  a:"قانون به حفظ نظم، مشخص شدن حقوق افراد و حل اختلاف‌ها کمک می‌کند."},
+ {id:5,g:8,s:"ریاضی",q:"اگر x + ۵ = ۱۲ باشد، مقدار x چند است؟",
+  a:"از دو طرف ۵ کم می‌کنیم: x = ۱۲ − ۵ = ۷."},
+ {id:6,g:8,s:"علوم",q:"تغییر شیمیایی چیست؟",
+  a:"تغییری است که طی آن ماده یا مواد جدیدی تشکیل می‌شوند؛ مانند زنگ زدن آهن."},
+ {id:7,g:8,s:"فارسی",q:"فعل چه چیزی را نشان می‌دهد؟",
+  a:"فعل معمولاً انجام کار یا روی دادن حالت را نشان می‌دهد و زمان و شخص نیز در آن مشخص می‌شود."},
+ {id:8,g:8,s:"مطالعات اجتماعی",q:"یکی از فایده‌های همکاری در جامعه چیست؟",
+  a:"همکاری به انجام بهتر کارها، حل مشکلات و رسیدن به هدف‌های مشترک کمک می‌کند."},
+ {id:9,g:9,s:"ریاضی",q:"حاصل ۲ به توان ۳ چیست؟",
+  a:"۲ × ۲ × ۲ = ۸."},
+ {id:10,g:9,s:"علوم",q:"واحد اندازه‌گیری نیرو چیست؟",
+  a:"واحد نیرو در دستگاه SI نیوتون است."},
+ {id:11,g:9,s:"فارسی",q:"تشبیه چیست؟",
+  a:"تشبیه مانند کردن چیزی به چیز دیگر به دلیل داشتن یک ویژگی مشترک است."},
+ {id:12,g:9,s:"زبان انگلیسی",q:"معنی واژه important چیست؟",
+  a:"Important یعنی مهم."},
+ {id:13,g:7,s:"زبان انگلیسی",q:"معنی واژه school چیست؟",
+  a:"School یعنی مدرسه."},
+ {id:14,g:8,s:"عربی",q:"معنی واژه کتاب چیست؟",
+  a:"کتاب در عربی نیز به معنای کتاب است."},
+ {id:15,g:9,s:"مطالعات اجتماعی",q:"چرا حفاظت از محیط زیست اهمیت دارد؟",
+  a:"برای حفظ منابع طبیعی، سلامت انسان‌ها و زندگی نسل‌های آینده اهمیت دارد."}
+];
 
-  9: {
-    math: [
-      ["حاصل (x + ۲)(x + ۳) را باز کنید.", "x² + ۵x + ۶"],
-      ["معادله ۳x − ۶ = ۱۲ را حل کنید.", "x = ۶"],
-      ["وتر مثلث قائم‌الزاویه با ضلع‌های ۳ و ۴ چند است؟", "۵؛ طبق قضیه فیثاغورس."],
-      ["شیب خط y = ۲x + ۱ چقدر است؟", "۲"],
-      ["احتمال آمدن عدد زوج در پرتاب یک تاس سالم چقدر است؟", "۳/۶ = ۱/۲"]
-    ],
-    science: [
-      ["وظیفه DNA چیست؟", "ذخیره اطلاعات ژنتیکی."],
-      ["واحد اندازه‌گیری جریان الکتریکی چیست؟", "آمپر."],
-      ["واکنش شیمیایی چیست؟", "فرایندی که طی آن مواد اولیه به مواد جدید تبدیل می‌شوند."],
-      ["صفحات سنگ‌کره چه حرکتی دارند؟", "نسبت به یکدیگر حرکت می‌کنند و این حرکت می‌تواند باعث زمین‌لرزه و آتشفشان شود."],
-      ["ژن چیست؟", "بخشی از DNA که اطلاعات وراثتی را در بر دارد."]
-    ],
-    study: [
-      ["سه قوه اصلی کشور را نام ببرید.", "قوه مقننه، مجریه و قضائیه."],
-      ["مشروطه به چه معناست؟", "حکومتی که اختیارات آن بر اساس قانون محدود و تنظیم می‌شود."],
-      ["چرا حفظ منابع طبیعی مهم است؟", "برای پایداری محیط زیست و نیازهای نسل‌های آینده."],
-      ["مهاجرت چیست؟", "جابه‌جایی محل زندگی از یک مکان به مکان دیگر."],
-      ["قانون اساسی چیست؟", "قانون بنیادینی که ساختار حکومت و حقوق و وظایف اصلی را تعیین می‌کند."]
-    ],
-    persian: [
-      ["آرایه تشخیص چیست؟", "نسبت دادن ویژگی انسان به اشیا یا پدیده‌های غیرانسانی."],
-      ["مفهوم کنایه چیست؟", "بیان غیرمستقیم یک منظور."],
-      ["نهاد جمله چیست؟", "بخشی که درباره آن خبری داده می‌شود."],
-      ["یک جمله با فعل مجهول بنویسید.", "نامه نوشته شد."],
-      ["تفاوت شعر و نثر چیست؟", "شعر معمولاً وزن یا آهنگ ادبی دارد؛ نثر ساختار معمول نوشتار را دارد."]
-    ]
-  }
+const quizzes = {
+  7:[
+   {q:"حاصل ۸ + ۴ چیست؟",o:["۱۰","۱۲","۱۴","۱۶"],c:1,e:"۸ + ۴ = ۱۲."},
+   {q:"آب در دمای معمولی چه حالتی دارد؟",o:["جامد","مایع","گاز","فلز"],c:1,e:"آب در شرایط معمولی مایع است."},
+   {q:"کدام گزینه اسم است؟",o:["زیبا","دوید","مدرسه","سریع"],c:2,e:"مدرسه نام یک مکان است."}
+  ],
+  8:[
+   {q:"اگر x + ۳ = ۹ باشد، x چند است؟",o:["۳","۵","۶","۱۲"],c:2,e:"۹ − ۳ = ۶."},
+   {q:"زنگ زدن آهن چه نوع تغییری است؟",o:["فیزیکی","شیمیایی","تغییر مکان","ذوب"],c:1,e:"در زنگ زدن ماده جدیدی تشکیل می‌شود."},
+   {q:"واحد اندازه‌گیری نیرو چیست؟",o:["متر","ثانیه","نیوتون","لیتر"],c:2,e:"واحد نیرو نیوتون است."}
+  ],
+  9:[
+   {q:"جذر ۸۱ کدام است؟",o:["۷","۸","۹","۱۰"],c:2,e:"۹ × ۹ = ۸۱."},
+   {q:"واحد جریان الکتریکی چیست؟",o:["ولت","آمپر","وات","اهم"],c:1,e:"واحد جریان الکتریکی آمپر است."},
+   {q:"کدام عدد اول است؟",o:["۹","۱۵","۱۷","۲۱"],c:2,e:"۱۷ فقط بر ۱ و خودش بخش‌پذیر است."}
+  ]
 };
 
-const names = {
-  math: "ریاضی",
-  science: "علوم",
-  study: "مطالعات اجتماعی",
-  persian: "فارسی"
-};
+const articles = [
+ "برای مطالعه بهتر، درس را به بخش‌های کوچک تقسیم کن، بعد از هر بخش چند سؤال حل کن و در پایان نکته‌های مهم را مرور کن.",
+ "در ریاضی ابتدا مثال کتاب را بفهم، سپس بدون نگاه کردن به پاسخ تمرین را حل کن. اشتباه‌ها را بررسی کن و دوباره تلاش کن.",
+ "اشتباه کردن بخشی از یادگیری است. پاسخ درست را پیدا کن، دلیل اشتباه را بنویس و چند روز بعد همان سؤال را دوباره حل کن."
+];
 
-function showQuestions() {
-  const grade = document.getElementById("grade").value;
-  const subject = document.getElementById("subject").value;
-  const list = data[grade][subject];
+let grade = 7;
+let subject = "همه";
+let quizIndex = -1;
+let score = 0;
+let answered = false;
+let finished = false;
+let chosen = -1;
 
-  document.getElementById("resultTitle").textContent =
-    "نمونه سؤالات " + names[subject] + " پایه " + grade;
-
-  const container = document.getElementById("questions");
-  container.innerHTML = "";
-
-  list.forEach((item, index) => {
-    const div = document.createElement("div");
-    div.className = "question";
-
-    const title = document.createElement("p");
-    title.textContent = (index + 1) + ". " + item[0];
-
-    const button = document.createElement("button");
-    button.textContent = "نمایش پاسخ";
-    button.onclick = function() {
-      answer.hidden = !answer.hidden;
-      button.textContent = answer.hidden ? "نمایش پاسخ" : "پنهان کردن پاسخ";
-    };
-
-    const answer = document.createElement("div");
-    answer.className = "answer";
-    answer.textContent = "پاسخ: " + item[1];
-    answer.hidden = true;
-
-    div.appendChild(title);
-    div.appendChild(button);
-    div.appendChild(answer);
-    container.appendChild(div);
-  });
+function readStorage(key,fallback) {
+ try {
+  const v=localStorage.getItem(key);
+  return v===null?fallback:JSON.parse(v);
+ } catch(e) { return fallback; }
 }
-
-showQuestions();
-</script>
-
-</body>
-</html>
+function saveStorage(key,value) {
+ try {localStorage.setItem(key,JSON.stringify(value));}
+ catch(e) {}
+}
+function favorites() {return readStorage("nora-favorites",[]);}
+function setGrade(g,el) {
+ grade=g;
+ document.querySelectorAll(".grade").forEach(x=>x.classList.remove("active"));
+ el.classList.add("active");
+ document.getElementById("gradeLabel").textContent="پایه "+faNum(g)+"م";
+ startQuiz();
+ renderQuestions();
+}
+function faNum(n) {
+ return String(n).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[Number(d)]);
+}
+function setSubject(s) {
+ subject=s;
+ document.querySelectorAll(".subject").forEach(el=>el.classList.remove("active"));
+ event.currentTarget.classList.add("active");
+ renderQuestions();
+ goQuestions();
+}
+function selectAllSubjects() {
+ subject="همه";
+ document.querySelectorAll(".subject").forEach(el=>el.classList.remove("active"));
+ renderQuestions();
+}
+function clearFilters() {
+ document.getElementById("search").value="";
+ document.getElementById("filter").value="";
+ subject="همه";
+ renderQuestions();
+}
+function goQuestions() {
+ document.getElementById("questions").scrollIntoView({behavior:"smooth"});
+ renderQuestions();
+}
+function goQuiz() {
+ document.getElementById("quiz").scrollIntoView({behavior:"smooth"});
+}
+function renderQuestions() {
+ const ter
