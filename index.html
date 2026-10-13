@@ -4,327 +4,364 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="نورا؛ بانک نمونه سؤال تشریحی، درس‌نامه و پاسخ‌های آموزشی پایه هفتم، هشتم و نهم">
-<title>نورا | بانک نمونه سؤال و آموزش</title>
+<meta name="theme-color" content="#5546e8">
+<meta name="description" content="نورا؛ سامانه آموزشی نمونه سؤال تشریحی، آزمون، درس و پاسخ برای پایه‌های هفتم، هشتم و نهم">
+<title>نورا | سامانه آموزشی</title>
 <style>
-:root{
-  --blue:#4568f5;--purple:#7656e8;--ink:#202744;
-  --muted:#788099;--bg:#f5f7ff;--white:#fff;
-}
+:root{--primary:#5948e8;--secondary:#8b5cf6;--bg:#f5f6fc;--card:#fff;--text:#222746;--muted:#7c8199;--border:#e9eaf3;--good:#16865c;--bad:#d84c5b}
+body.dark{--bg:#171827;--card:#232538;--text:#f3f3ff;--muted:#b0b2c7;--border:#383a50}
 *{box-sizing:border-box}
-body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.9}
-button,input{font:inherit}
-button{cursor:pointer;border:0}
-a{color:inherit;text-decoration:none}
-header{background:white;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;box-shadow:0 3px 20px #243b7410;position:sticky;top:0;z-index:5}
-.logo{display:flex;align-items:center;gap:10px;font-size:25px;font-weight:bold;color:var(--blue)}
-.logo-icon{width:45px;height:45px;border-radius:15px;background:linear-gradient(135deg,#6d8bff,#8e5be8);color:white;display:grid;place-items:center;font-size:25px}
-nav{display:flex;gap:8px;flex-wrap:wrap}
-nav a{padding:7px 12px;border-radius:12px;font-size:13px}
-nav a:hover{background:#edf0ff;color:var(--blue)}
-.hero{margin:25px auto;padding:30px 25px;width:90%;max-width:1150px;border-radius:28px;color:white;background:linear-gradient(120deg,#4266f5,#7655df);display:flex;align-items:center;justify-content:space-between;gap:20px;overflow:hidden}
-.hero h1{font-size:clamp(25px,4vw,39px);line-height:1.6;margin:0 0 8px}
-.hero p{color:#eef0ff;margin:0 0 20px}
-.hero-art{font-size:100px;min-width:140px;text-align:center;filter:drop-shadow(0 12px 12px #20205a33)}
-.btn{background:var(--blue);color:white;border-radius:12px;padding:10px 16px;font-weight:bold}
-.btn-light{background:white;color:var(--blue)}
-.btn-soft{background:#edf0ff;color:var(--blue)}
-main{width:90%;max-width:1150px;margin:0 auto 45px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.9;transition:.2s}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+header{background:var(--card);padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:10px;font-size:24px;font-weight:bold;color:var(--primary);cursor:pointer}
+.brand-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,#7665ff,#a45df3);color:white}
+nav{display:flex;gap:5px;flex-wrap:wrap}
+nav button{background:transparent;color:var(--text);padding:7px 10px;border-radius:10px;font-size:13px}
+nav button:hover{background:var(--bg);color:var(--primary)}
+.wrap{width:92%;max-width:1150px;margin:auto}
+.hero{margin:24px auto;padding:28px;border-radius:25px;color:white;background:linear-gradient(120deg,#5145e8,#9b5bea);display:flex;align-items:center;justify-content:space-between;gap:18px;overflow:hidden}
+.hero h1{font-size:clamp(25px,4vw,38px);line-height:1.6;margin:0}
+.hero p{color:#f0edff}
+.hero-art{font-size:90px;min-width:100px;text-align:center}
+.btn{border:0;border-radius:12px;background:var(--primary);color:white;padding:10px 15px;font-weight:bold}
+.btn:hover{filter:brightness(1.08)}
+.btn.light{background:white;color:#5948e8}
+.btn.soft{background:#eeecff;color:#5948e8}
+body.dark .btn.soft{background:#393451;color:#d7d0ff}
+.btn.red{background:#d84c5b}
+.btn.small{padding:6px 10px;font-size:12px}
 .section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:28px 0 14px}
-.section-head h2{font-size:22px;margin:0}
+.section-head h2{margin:0;font-size:21px}
 .muted{color:var(--muted);font-size:13px}
-.grades{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.grade{background:white;border:2px solid transparent;border-radius:20px;padding:17px;text-align:center;box-shadow:0 5px 20px #293c7a08;transition:.2s}
-.grade:hover,.grade.active{border-color:var(--blue);transform:translateY(-3px)}
-.grade .emoji{font-size:35px}
-.grade h3{margin:5px 0}
+.grades{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.grade{background:var(--card);color:var(--text);border:2px solid transparent;border-radius:17px;padding:13px;text-align:center}
+.grade.active{border-color:var(--primary);box-shadow:0 5px 18px #5948e815}
+.grade .emoji{font-size:32px}
+.grade h3{margin:0}
 .grade p{margin:0;color:var(--muted);font-size:12px}
-.search{width:100%;padding:14px 16px;border:1px solid #e4e7f2;border-radius:15px;background:white;outline:none;margin-top:18px}
-.search:focus{border-color:var(--blue)}
-.subjects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.subject{background:white;border-radius:21px;overflow:hidden;box-shadow:0 5px 20px #293c7a09;transition:.2s}
-.subject:hover{transform:translateY(-3px)}
-.subject-art{height:125px;display:grid;place-items:center;font-size:57px;position:relative;overflow:hidden}
-.subject-art:before,.subject-art:after{content:"";position:absolute;border-radius:50%;background:#ffffff25}
-.subject-art:before{width:110px;height:110px;top:-45px;right:-15px}
-.subject-art:after{width:75px;height:75px;bottom:-40px;left:25px}
-.subject-art span{position:relative;z-index:1}
-.subject-info{padding:14px}
-.subject-info h3{margin:0;font-size:17px}
-.subject-info p{font-size:12px;color:var(--muted);margin:5px 0 12px}
-.subject-info button{width:100%}
-.panel{display:none;background:white;padding:20px;border-radius:22px;margin-top:20px;box-shadow:0 5px 25px #293c7a0c}
+.searchbox{display:flex;gap:8px;margin:15px 0}
+input,textarea,select{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:12px;padding:11px;min-width:0}
+.searchbox input{width:100%}
+.subjects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.subject{background:var(--card);border:1px solid var(--border);border-radius:19px;overflow:hidden}
+.art{height:110px;display:grid;place-items:center;font-size:52px;position:relative;overflow:hidden}
+.art:before,.art:after{content:"";position:absolute;background:#ffffff25;border-radius:50%;width:90px;height:90px;right:-15px;top:-35px}
+.art:after{width:65px;height:65px;right:auto;left:15px;top:65px}
+.art span{position:relative;z-index:1}
+.subject-content{padding:13px}
+.subject-content h3{margin:0;font-size:16px}
+.subject-content p{color:var(--muted);font-size:12px;margin:4px 0 12px}
+.subject-content .btn{width:100%}
+.panel{display:none;margin-top:20px;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:18px}
 .panel.show{display:block}
-.question{padding:15px 0;border-bottom:1px solid #edf0f7}
-.question:last-child{border:0}
-.question h4{margin:0 0 10px}
-.answer{display:none;background:#f0f5ff;padding:12px;border-radius:12px;margin-top:10px;font-size:14px}
+.chapters,.row-buttons{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chapter{border:1px solid var(--border);background:var(--bg);color:var(--text);padding:7px 12px;border-radius:10px}
+.chapter.active{background:var(--primary);color:white}
+.question{border-bottom:1px solid var(--border);padding:15px 0}
+.question:last-child{border-bottom:0}
+.question h3{font-size:15px;margin:8px 0}
+.answer{display:none;background:var(--bg);padding:12px;border-radius:12px;margin-top:10px}
 .answer.show{display:block}
-.badge{background:#edf0ff;color:var(--blue);font-size:11px;border-radius:20px;padding:4px 9px}
-.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.feature{padding:20px;background:white;border-radius:20px}
-.feature .emoji{font-size:35px}
-.feature h3{margin:5px 0}
+textarea{width:100%;resize:vertical}
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.feature{padding:17px;background:var(--card);border:1px solid var(--border);border-radius:17px}
+.feature .emoji{font-size:32px}
+.feature h3{margin:4px 0}
 footer{text-align:center;padding:25px;color:var(--muted);font-size:12px}
-.empty{padding:25px;text-align:center;color:var(--muted)}
-@media(max-width:650px){
+.hidden{display:none!important}
+.notice{background:var(--bg);border-radius:12px;padding:12px;margin:12px 0;font-size:13px}
+.option{display:block;padding:9px;margin:8px 0;border:1px solid var(--border);border-radius:10px;cursor:pointer}
+.option:has(input:checked){border-color:var(--primary);background:#5948e810}
+.result{font-size:20px;font-weight:bold;margin:15px 0}
+@media(max-width:680px){
  header{position:static}
- .hero{padding:22px 18px}
- .hero-art{font-size:65px;min-width:75px}
- .grades{gap:8px}
- .grade{padding:12px 5px}
- .subjects{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
- .subject-art{height:100px;font-size:45px}
- .subject-info{padding:10px}
- .subject-info h3{font-size:15px}
+ .hero{padding:20px}
+ .hero-art{font-size:60px;min-width:65px}
+ .subjects{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .art{height:90px;font-size:42px}
+ .subject-content{padding:10px}
+ .subject-content h3{font-size:14px}
  .features{grid-template-columns:1fr}
- nav a{padding:5px 7px}
+ nav button{font-size:11px;padding:6px}
 }
-@media(max-width:360px){.subjects{grid-template-columns:1fr}}
+@media(max-width:370px){.subjects{grid-template-columns:1fr}}
 @media print{
- header,.hero,.grades,.search,.features,footer,.no-print{display:none!important}
- body{background:white}
- main{width:100%;margin:0}
- .panel{display:block!important;box-shadow:none}
+ header,.hero,#grades,#lessonSection,#features,footer,.no-print{display:none!important}
+ .panel{display:block!important;border:0}
  .answer{display:block!important}
+ body{background:white;color:black}
 }
 </style>
 </head>
 <body>
 
 <header>
-  <a class="logo" href="#" onclick="goHome();return false">
-    <span class="logo-icon">ن</span> نورا
-  </a>
+  <div class="brand" onclick="home()"><span class="brand-icon">ن</span> نورا</div>
   <nav>
-    <a href="#grades">پایه‌ها</a>
-    <a href="#lessons">درس‌ها</a>
-    <a href="#features">امکانات</a>
-    <a href="#about">درباره نورا</a>
+    <button onclick="home()">خانه</button>
+    <button onclick="go('lessonSection')">درس‌ها</button>
+    <button onclick="showFavorites()">علاقه‌مندی‌ها</button>
+    <button onclick="startQuiz()">آزمون</button>
+    <button onclick="toggleDark()">🌙 حالت شب</button>
   </nav>
 </header>
 
+<div class="wrap">
 <section class="hero">
-  <div>
-    <h1>یادگیری آسان، موفقیت بزرگ! 📚</h1>
-    <p>نمونه سؤال تشریحی، پاسخ آموزشی و محتوای درسی پایه‌های هفتم، هشتم و نهم.</p>
-    <button class="btn btn-light" onclick="document.querySelector('#grades').scrollIntoView({behavior:'smooth'})">شروع یادگیری ←</button>
-  </div>
-  <div class="hero-art">🎓</div>
+ <div>
+  <h1>با نورا بهتر یاد بگیر! 📚</h1>
+  <p>درس بخوان، سؤال حل کن و پیشرفتت را بررسی کن.</p>
+  <button class="btn light" onclick="go('grades')">انتخاب پایه ←</button>
+ </div>
+ <div class="hero-art">🎓</div>
 </section>
 
-<main>
-  <section id="grades">
-    <div class="section-head">
-      <h2>پایه تحصیلی خودت را انتخاب کن</h2>
-      <span class="muted">یک پایه را انتخاب کن</span>
-    </div>
-    <div class="grades">
-      <button class="grade active" data-grade="7" onclick="chooseGrade('7',this)">
-        <div class="emoji">🌱</div><h3>هفتم</h3><p>پایه هفتم متوسطه</p>
-      </button>
-      <button class="grade" data-grade="8" onclick="chooseGrade('8',this)">
-        <div class="emoji">🚀</div><h3>هشتم</h3><p>پایه هشتم متوسطه</p>
-      </button>
-      <button class="grade" data-grade="9" onclick="chooseGrade('9',this)">
-        <div class="emoji">🏆</div><h3>نهم</h3><p>پایه نهم متوسطه</p>
-      </button>
-    </div>
-  </section>
+<section id="grades">
+ <div class="section-head"><h2>پایه تحصیلی</h2><span class="muted">پایه‌ات را انتخاب کن</span></div>
+ <div class="grades">
+  <button class="grade active" onclick="setGrade('7',this)"><div class="emoji">🌱</div><h3>هفتم</h3><p>پایه هفتم</p></button>
+  <button class="grade" onclick="setGrade('8',this)"><div class="emoji">🚀</div><h3>هشتم</h3><p>پایه هشتم</p></button>
+  <button class="grade" onclick="setGrade('9',this)"><div class="emoji">🏆</div><h3>نهم</h3><p>پایه نهم</p></button>
+ </div>
+</section>
 
-  <section id="lessons">
-    <div class="section-head">
-      <h2>📚 درس‌های آموزشی</h2>
-      <span class="muted" id="gradeLabel">نمونه محتوای پایه هفتم</span>
-    </div>
-    <input id="search" class="search" placeholder="🔍 نام درس را جست‌وجو کن..." oninput="renderSubjects()">
-    <div class="subjects" id="subjects"></div>
-    <div id="lessonPanel" class="panel">
-      <div class="section-head">
-        <h2 id="lessonTitle">نمونه سؤال‌ها</h2>
-        <button class="btn btn-soft no-print" onclick="closeLesson()">بستن ✕</button>
-      </div>
-      <p class="muted">این بخش شامل نمونه سؤال تشریحی و پاسخ آموزشی است.</p>
-      <div id="questions"></div>
-      <button class="btn no-print" onclick="window.print()">🖨️ چاپ سؤال‌ها و پاسخ‌ها</button>
-    </div>
-  </section>
+<section id="lessonSection">
+ <div class="section-head"><h2>📚 انتخاب درس</h2><span id="gradeText" class="muted">پایه هفتم</span></div>
+ <div class="searchbox">
+  <input id="search" placeholder="نام درس را جست‌وجو کن..." oninput="renderSubjects()">
+  <button class="btn" onclick="clearSearch()">پاک‌کردن</button>
+ </div>
+ <div class="subjects" id="subjects"></div>
+</section>
 
-  <section id="features">
-    <div class="section-head"><h2>✨ امکانات نورا</h2></div>
-    <div class="features">
-      <div class="feature"><div class="emoji">✍️</div><h3>سؤال تشریحی</h3><p class="muted">برای تمرین و آمادگی امتحان، پاسخ را خودت بنویس و سپس جواب پیشنهادی را ببین.</p></div>
-      <div class="feature"><div class="emoji">💡</div><h3>پاسخ آموزشی</h3><p class="muted">پاسخ هر سؤال را جداگانه باز کن و مطالب را مرور کن.</p></div>
-      <div class="feature"><div class="emoji">🖨️</div><h3>نسخه قابل چاپ</h3><p class="muted">سؤال‌ها و پاسخ‌ها را برای تمرین چاپ کن یا به صورت PDF ذخیره کن.</p></div>
-    </div>
-  </section>
+<section id="lessonPanel" class="panel">
+ <div class="section-head"><h2 id="lessonTitle">درس</h2><button class="btn soft no-print" onclick="closePanel('lessonPanel')">بستن ✕</button></div>
+ <p class="muted">فصل را انتخاب کن یا همه سؤال‌ها را ببین.</p>
+ <div id="chapters" class="chapters no-print"></div>
+ <div id="questions"></div>
+ <div class="row-buttons no-print">
+  <button class="btn" onclick="printPage()">🖨️ چاپ سؤال‌ها</button>
+  <button class="btn soft" onclick="showAllAnswers()">نمایش همه پاسخ‌ها</button>
+ </div>
+</section>
 
-  <section id="about">
-    <div class="section-head"><h2>💜 درباره نورا</h2></div>
-    <div class="feature">
-      نورا یک وب‌سایت آموزشی برای دانش‌آموزان پایه‌های هفتم، هشتم و نهم است. هدف آن دسترسی ساده به نمونه سؤال‌های تشریحی و مرور درس‌هاست.
-      <p class="muted">توجه: سؤال‌های موجود در این نسخه، نمونه‌های آموزشی اولیه هستند و هنوز بانک کامل سؤال‌های کتاب‌های درسی نیستند.</p>
-    </div>
-  </section>
-</main>
+<section id="favoritesPanel" class="panel">
+ <div class="section-head"><h2>⭐ علاقه‌مندی‌های من</h2><button class="btn soft" onclick="closePanel('favoritesPanel')">بستن ✕</button></div>
+ <div id="favoritesList"></div>
+</section>
 
-<footer>© نورا | یادگیری برای همه 🌟</footer>
+<section id="quizPanel" class="panel">
+ <div class="section-head"><h2>📝 آزمون نورا</h2><button class="btn soft" onclick="closePanel('quizPanel')">بستن ✕</button></div>
+ <p class="muted">به سؤال‌ها پاسخ بده و در پایان نتیجه را ببین. این آزمون کوتاه آموزشی است.</p>
+ <div id="quizContent"></div>
+</section>
+
+<section id="features">
+ <div class="section-head"><h2>✨ امکانات سایت</h2></div>
+ <div class="features">
+  <div class="feature"><div class="emoji">✍️</div><h3>نمونه سؤال تشریحی</h3><p class="muted">سؤال‌ها را بخوان و جواب خودت را بنویس.</p></div>
+  <div class="feature"><div class="emoji">💡</div><h3>پاسخ آموزشی</h3><p class="muted">پاسخ پیشنهادی را با یک دکمه ببین.</p></div>
+  <div class="feature"><div class="emoji">⭐</div><h3>علاقه‌مندی‌ها</h3><p class="muted">سؤال‌های دلخواهت را ذخیره کن. ذخیره‌سازی در همین مرورگر انجام می‌شود.</p></div>
+ </div>
+</section>
+</div>
+<footer>نورا | سامانه یادگیری و تمرین 📚</footer>
 
 <script>
-let currentGrade = "7";
+const data={
+"7":[
+{name:"ریاضی",icon:"📐",color:"#ff9966",desc:"عددها و هندسه",chapters:[
+{title:"عددهای صحیح",qs:[
+["عدد صحیح چیست؟","عددهای طبیعی، صفر و قرینه‌های منفی آن‌ها، عدد صحیح هستند."],
+["حاصل ۸ + (−۳) چیست؟","۸ − ۳ = ۵؛ پاسخ ۵ است."]]},
+{title:"هندسه",qs:[
+["مجموع زاویه‌های داخلی مثلث چند درجه است؟","۱۸۰ درجه."],
+["محیط مربع با ضلع ۴ سانتی‌متر چقدر است؟","محیط برابر ۴ × ۴ یعنی ۱۶ سانتی‌متر است."]]}]},
+{name:"علوم",icon:"🔬",color:"#42cba5",desc:"ماده و طبیعت",chapters:[
+{title:"مواد و ویژگی‌ها",qs:[
+["ماده چیست؟","هر چیزی که جرم داشته باشد و فضا اشغال کند، ماده است."],
+["سه حالت اصلی ماده را نام ببرید.","جامد، مایع و گاز."]]},
+{title:"انرژی",qs:[
+["انرژی چیست؟","انرژی توانایی انجام کار یا ایجاد تغییر است."],
+["دو نمونه از منابع انرژی را نام ببرید.","خورشید و باد."]]}]},
+{name:"فارسی",icon:"📖",color:"#dc83cf",desc:"ادبیات و نگارش",chapters:[
+{title:"واژه و دستور",qs:[
+["اسم چیست؟","واژه‌ای که برای نامیدن انسان، حیوان، مکان یا چیز به کار می‌رود."],
+["مترادف چیست؟","واژه‌هایی با معنی یکسان یا نزدیک، مانند زیبا و قشنگ."]]},
+{title:"نگارش",qs:[
+["چرا نشانه‌گذاری مهم است؟","به خواننده کمک می‌کند معنی جمله و مکث‌های آن را بهتر بفهمد."]]}]},
+{name:"مطالعات اجتماعی",icon:"🌍",color:"#6398fa",desc:"جامعه و جغرافیا",chapters:[
+{title:"جغرافیا",qs:[["نقشه چیست؟","تصویری کوچک‌شده از تمام یا بخشی از سطح زمین است."]]},
+{title:"زندگی اجتماعی",qs:[["چرا همکاری اهمیت دارد؟","باعث تقسیم مسئولیت و بهتر انجام شدن کارها می‌شود."]]}]},
+{name:"زبان انگلیسی",icon:"🔤",color:"#f5bd50",desc:"واژه و جمله",chapters:[
+{title:"واژگان",qs:[["معنی book چیست؟","Book یعنی کتاب."],["معنی school چیست؟","School یعنی مدرسه."]]},
+{title:"جمله‌سازی",qs:[["معنی I am a student چیست؟","من دانش‌آموز هستم."]]}]},
+{name:"پیام‌های آسمان",icon:"🌙",color:"#9775ed",desc:"دین و اخلاق",chapters:[
+{title:"اخلاق",qs:[["راست‌گویی چه فایده‌ای دارد؟","باعث اعتماد دیگران و تقویت روابط سالم می‌شود."]]},
+{title:"شکرگزاری",qs:[["شکرگزاری یعنی چه؟","شناخت نعمت‌ها و سپاسگزاری برای آن‌ها."]]}]}
+],
+"8":[
+{name:"ریاضی",icon:"📐",color:"#ff9966",desc:"جبر و هندسه",chapters:[
+{title:"عددهای گویا",qs:[["عدد گویا چیست؟","عددی که بتوان آن را به صورت a/b نوشت، به شرط اینکه a و b صحیح و b ناصفر باشد."],["حاصل ۲x + ۳x چیست؟","۵x؛ چون جمله‌های هم‌نوع با هم جمع می‌شوند."]]},
+{title:"هندسه",qs:[["مجموع زاویه‌های داخلی مثلث چند درجه است؟","۱۸۰ درجه."]]}]},
+{name:"علوم",icon:"🔬",color:"#42cba5",desc:"فیزیک و شیمی",chapters:[
+{title:"اتم و ماده",qs:[["اتم چیست؟","کوچک‌ترین واحد یک عنصر است که ویژگی‌های شیمیایی آن عنصر را حفظ می‌کند."],["تفاوت تغییر فیزیکی و شیمیایی چیست؟","در تغییر فیزیکی معمولاً ماده جدیدی ایجاد نمی‌شود؛ در تغییر شیمیایی ماده جدیدی شکل می‌گیرد."]]},
+{title:"نیرو",qs:[["نیرو چه اثری بر جسم دارد؟","می‌تواند سرعت، جهت حرکت یا شکل جسم را تغییر دهد."]]}]},
+{name:"فارسی",icon:"📖",color:"#dc83cf",desc:"ادبیات و دستور",chapters:[
+{title:"آرایه ادبی",qs:[["تشبیه چیست؟","مانند کردن چیزی به چیز دیگر به دلیل داشتن ویژگی مشترک است."]]},
+{title:"دستور زبان",qs:[["فعل چه چیزی را نشان می‌دهد؟","انجام کار یا رخ دادن حالت را همراه با زمان نشان می‌دهد."]]}]},
+{name:"مطالعات اجتماعی",icon:"🌍",color:"#6398fa",desc:"جامعه و تاریخ",chapters:[
+{title:"جامعه",qs:[["شهروند مسئول چه ویژگی‌هایی دارد؟","قانون را رعایت می‌کند و به حقوق دیگران احترام می‌گذارد."]]},
+{title:"محیط زیست",qs:[["چرا باید از منابع طبیعی حفاظت کنیم؟","برای حفظ زندگی، سلامت انسان و منابع نسل‌های آینده."]]}]},
+{name:"زبان انگلیسی",icon:"🔤",color:"#f5bd50",desc:"واژگان و گرامر",chapters:[
+{title:"واژگان",qs:[["معنی usually چیست؟","Usually یعنی معمولاً."]]},
+{title:"افعال",qs:[["گذشته فعل go چیست؟","Went."]]}]},
+{name:"پیام‌های آسمان",icon:"🌙",color:"#9775ed",desc:"اخلاق و دین",chapters:[
+{title:"اخلاق",qs:[["مسئولیت‌پذیری یعنی چه؟","یعنی وظایف خود را بشناسیم و برای انجام درست آن‌ها تلاش کنیم."]]}]}
+],
+"9":[
+{name:"ریاضی",icon:"📐",color:"#ff9966",desc:"معادله و هندسه",chapters:[
+{title:"معادله",qs:[["اگر x + ۵ = ۱۲ باشد، x چند است؟","از دو طرف ۵ کم می‌کنیم؛ پس x = ۷."],["معادله چیست؟","تساوی‌ای شامل یک یا چند مجهول است."]]},
+{title:"هندسه",qs:[["قضیه فیثاغورس در چه مثلثی کاربرد دارد؟","در مثلث قائم‌الزاویه؛ مربع وتر برابر مجموع مربع‌های دو ضلع دیگر است."]]}]},
+{name:"علوم",icon:"🔬",color:"#42cba5",desc:"ماده و انرژی",chapters:[
+{title:"ساختار ماده",qs:[["عنصر چیست؟","ماده خالصی که از یک نوع اتم تشکیل شده است."],["مولکول چیست؟","از پیوند شیمیایی دو یا چند اتم تشکیل می‌شود."]]},
+{title:"الکتریسیته",qs:[["مدار الکتریکی ساده به چه چیزهایی نیاز دارد؟","معمولاً به منبع انرژی، سیم رابط و مصرف‌کننده نیاز دارد. برای جریان پایدار مسیر باید بسته باشد."]]}]},
+{name:"فارسی",icon:"📖",color:"#dc83cf",desc:"آرایه و نگارش",chapters:[
+{title:"آرایه‌های ادبی",qs:[["استعاره چیست؟","کاربرد مجازی واژه بر پایه شباهت میان دو چیز است."]]},
+{title:"نگارش",qs:[["تفاوت نظم و نثر چیست؟","نظم معمولاً وزن و گاهی قافیه دارد؛ نثر به شیوه عادی نوشتار است."]]}]},
+{name:"مطالعات اجتماعی",icon:"🌍",color:"#6398fa",desc:"تاریخ و جغرافیا",chapters:[
+{title:"قانون",qs:[["قانون اساسی چیست؟","مجموعه اصول بنیادین درباره ساختار حکومت، حقوق مردم و وظایف نهادهاست."]]},
+{title:"محیط زیست",qs:[["چرا حفاظت از محیط زیست مهم است؟","برای حفظ منابع طبیعی، سلامت انسان و زندگی نسل‌های آینده."]]}]},
+{name:"زبان انگلیسی",icon:"🔤",color:"#f5bd50",desc:"واژگان و گرامر",chapters:[
+{title:"واژگان",qs:[["معنی environment چیست؟","محیط زیست یا محیط اطراف."]]},
+{title:"افعال",qs:[["شکل سوم فعل write چیست؟","Written."]]}]},
+{name:"پیام‌های آسمان",icon:"🌙",color:"#9775ed",desc:"اخلاق و مفاهیم دینی",chapters:[
+{title:"اخلاق",qs:[["انصاف یعنی چه؟","یعنی حق دیگران را رعایت کنیم و عادلانه رفتار کنیم."]]}]}
+]};
 
-const subjectsData = {
-  "7": [
-    {name:"ریاضی",icon:"📐",color:"linear-gradient(135deg,#ffbd69,#ff8058)",desc:"عددها، هندسه و حل مسئله",questions:[
-      ["عدد اول چیست؟","عدد طبیعی بزرگ‌تر از ۱ که فقط دو شمارندهٔ مثبت، یعنی ۱ و خودش، دارد؛ مانند ۲، ۳ و ۵."],
-      ["محیط مربع چگونه محاسبه می‌شود؟","محیط مربع برابر است با چهار برابر طول یک ضلع آن."],
-      ["حاصل ۳ × (۴ + ۲) چیست؟","ابتدا داخل پرانتز را حساب می‌کنیم: ۴ + ۲ = ۶. سپس ۳ × ۶ = ۱۸."]
-    ]},
-    {name:"علوم",icon:"🔬",color:"linear-gradient(135deg,#66dfba,#26a88f)",desc:"آزمایش، ماده و طبیعت",questions:[
-      ["ماده چیست؟","هر چیزی که جرم داشته باشد و فضا اشغال کند، ماده نامیده می‌شود."],
-      ["سه حالت اصلی ماده را نام ببرید.","جامد، مایع و گاز."],
-      ["مشاهده در علوم چه اهمیتی دارد؟","مشاهده به ما کمک می‌کند پدیده‌ها را بررسی کنیم و برای پرسش‌های علمی پاسخ پیدا کنیم."]
-    ]},
-    {name:"فارسی",icon:"📖",color:"linear-gradient(135deg,#f8a9d5,#d46ac0)",desc:"ادبیات، واژه و نگارش",questions:[
-      ["اسم چیست؟","واژه‌ای است که برای نامیدن انسان، حیوان، مکان یا چیز به کار می‌رود."],
-      ["مترادف چیست؟","دو واژه که معنی یکسان یا نزدیک به هم داشته باشند؛ مانند زیبا و قشنگ."],
-      ["چرا باید کتاب بخوانیم؟","کتاب‌خوانی دانش، دایره واژگان و قدرت درک ما را افزایش می‌دهد."]
-    ]},
-    {name:"مطالعات اجتماعی",icon:"🌍",color:"linear-gradient(135deg,#82b6ff,#5474ed)",desc:"جامعه، تاریخ و جغرافیا",questions:[
-      ["نقشه چیست؟","تصویری کوچک‌شده از تمام یا بخشی از سطح زمین که اطلاعات مکانی را نشان می‌دهد."],
-      ["چرا همکاری در خانواده مهم است؟","زیرا باعث تقسیم مسئولیت‌ها، افزایش همدلی و بهتر انجام شدن کارها می‌شود."]
-    ]},
-    {name:"زبان انگلیسی",icon:"🔤",color:"linear-gradient(135deg,#ffd66d,#ffad46)",desc:"واژه‌ها و جمله‌های انگلیسی",questions:[
-      ["معنی کتاب به انگلیسی چیست؟","Book یعنی کتاب."],
-      ["جملهٔ I am a student یعنی چه؟","یعنی «من دانش‌آموز هستم»."],
-      ["سه روز هفته را به انگلیسی بنویسید.","Monday (دوشنبه)، Tuesday (سه‌شنبه)، Wednesday (چهارشنبه)."]
-    ]},
-    {name:"پیام‌های آسمان",icon:"🌙",color:"linear-gradient(135deg,#b4a1ff,#8463e8)",desc:"درس‌های دینی و اخلاقی",questions:[
-      ["چرا راست‌گویی اهمیت دارد؟","راست‌گویی باعث اعتماد دیگران و تقویت روابط سالم می‌شود."],
-      ["شکرگزاری یعنی چه؟","یعنی نعمت‌ها را بشناسیم و از خداوند برای آن‌ها سپاسگزار باشیم."]
-    ]}
-  ],
-  "8": [
-    {name:"ریاضی",icon:"📐",color:"linear-gradient(135deg,#ffbd69,#ff8058)",desc:"عددهای گویا، جبر و هندسه",questions:[
-      ["عدد گویا چیست؟","عددی که بتوان آن را به شکل کسر a/b نوشت، به‌طوری‌که a و b عدد صحیح و b ناصفر باشد."],
-      ["حاصل ۲x + ۳x چیست؟","جمله‌های هم‌نوع را جمع می‌کنیم؛ پس حاصل ۵x است."],
-      ["مجموع زاویه‌های داخلی مثلث چند درجه است؟","مجموع زاویه‌های داخلی هر مثلث ۱۸۰ درجه است."]
-    ]},
-    {name:"علوم",icon:"🔬",color:"linear-gradient(135deg,#66dfba,#26a88f)",desc:"فیزیک، شیمی و زیست",questions:[
-      ["اتم چیست؟","اتم کوچک‌ترین واحد یک عنصر است که ویژگی‌های شیمیایی آن عنصر را حفظ می‌کند."],
-      ["تفاوت تغییر فیزیکی و شیمیایی چیست؟","در تغییر فیزیکی معمولاً مادهٔ جدیدی ایجاد نمی‌شود؛ در تغییر شیمیایی ماده یا مواد جدید به وجود می‌آیند."],
-      ["نیرو چه اثری بر حرکت جسم دارد؟","نیرو می‌تواند سرعت، جهت حرکت یا شکل جسم را تغییر دهد."]
-    ]},
-    {name:"فارسی",icon:"📖",color:"linear-gradient(135deg,#f8a9d5,#d46ac0)",desc:"ادبیات و دستور زبان",questions:[
-      ["تشبیه چیست؟","مانند کردن چیزی به چیز دیگر به دلیل داشتن ویژگی مشترک؛ مانند «صورتش مثل ماه است»."],
-      ["فعل چه چیزی را نشان می‌دهد؟","فعل معمولاً انجام کار یا رخ دادن حالت را همراه با زمان نشان می‌دهد."]
-    ]},
-    {name:"مطالعات اجتماعی",icon:"🌍",color:"linear-gradient(135deg,#82b6ff,#5474ed)",desc:"تاریخ، جغرافیا و جامعه",questions:[
-      ["چرا منابع طبیعی اهمیت دارند؟","زیرا در تأمین نیازهای انسان، تولید کالا و حفظ زندگی موجودات نقش دارند."],
-      ["شهروند مسئول چه ویژگی‌هایی دارد؟","قانون را رعایت می‌کند، به حقوق دیگران احترام می‌گذارد و در کارهای اجتماعی مشارکت می‌کند."]
-    ]},
-    {name:"زبان انگلیسی",icon:"🔤",color:"linear-gradient(135deg,#ffd66d,#ffad46)",desc:"گرامر و مکالمه",questions:[
-      ["معنی usually چیست؟","Usually یعنی «معمولاً»."],
-      ["گذشتهٔ فعل go چیست؟","گذشتهٔ سادهٔ go، واژهٔ went است."],
-      ["جملهٔ She is reading یعنی چه؟","یعنی «او در حال کتاب خواندن است»."]
-    ]},
-    {name:"پیام‌های آسمان",icon:"🌙",color:"linear-gradient(135deg,#b4a1ff,#8463e8)",desc:"دین، اخلاق و زندگی",questions:[
-      ["احترام به والدین چه اهمیتی دارد؟","نشانهٔ قدردانی و خوش‌رفتاری است و به استحکام خانواده کمک می‌کند."],
-      ["مسئولیت‌پذیری یعنی چه؟","یعنی وظایف خود را بشناسیم و برای انجام درست آن‌ها تلاش کنیم."]
-    ]}
-  ],
-  "9": [
-    {name:"ریاضی",icon:"📐",color:"linear-gradient(135deg,#ffbd69,#ff8058)",desc:"معادله، توان و هندسه",questions:[
-      ["معادله چیست؟","تساوی‌ای شامل یک یا چند مجهول که درستی آن به مقدار مجهول بستگی دارد."],
-      ["اگر x + ۵ = ۱۲ باشد، x چند است؟","از دو طرف معادله ۵ کم می‌کنیم؛ بنابراین x = ۷."],
-      ["قضیهٔ فیثاغورس در چه مثلثی کاربرد دارد؟","در مثلث قائم‌الزاویه؛ مربع وتر برابر مجموع مربع‌های دو ضلع دیگر است."]
-    ]},
-    {name:"علوم",icon:"🔬",color:"linear-gradient(135deg,#66dfba,#26a88f)",desc:"ساختار ماده و پدیده‌ها",questions:[
-      ["عنصر چیست؟","ماده‌ای خالص که از یک نوع اتم تشکیل شده است."],
-      ["تفاوت اتم و مولکول چیست؟","اتم یک واحد از عنصر است؛ مولکول از پیوند شیمیایی دو یا چند اتم تشکیل می‌شود."],
-      ["مدار الکتریکی ساده از چه بخش‌هایی تشکیل می‌شود؟","معمولاً از منبع انرژی، سیم‌های رابط و مصرف‌کننده تشکیل می‌شود و برای جریان پایدار به مسیر بسته نیاز دارد."]
-    ]},
-    {name:"فارسی",icon:"📖",color:"linear-gradient(135deg,#f8a9d5,#d46ac0)",desc:"آرایه‌ها و نگارش",questions:[
-      ["استعاره چیست؟","نوعی کاربرد مجازی واژه است که در آن چیزی به دلیل شباهت، به نام چیز دیگری خوانده می‌شود."],
-      ["تفاوت نظم و نثر چیست؟","نظم معمولاً دارای وزن و گاهی قافیه است؛ نثر به شیوهٔ عادی نوشتار نوشته می‌شود."]
-    ]},
-    {name:"مطالعات اجتماعی",icon:"🌍",color:"linear-gradient(135deg,#82b6ff,#5474ed)",desc:"تاریخ و جغرافیای ایران",questions:[
-      ["قانون اساسی چیست؟","مجموعهٔ اصول بنیادین یک کشور دربارهٔ ساختار حکومت، حقوق مردم و وظایف نهادهاست."],
-      ["چرا حفاظت از محیط زیست مهم است؟","برای حفظ منابع طبیعی، سلامت انسان و ادامهٔ زندگی نسل‌های آینده."]
-    ]},
-    {name:"زبان انگلیسی",icon:"🔤",color:"linear-gradient(135deg,#ffd66d,#ffad46)",desc:"واژگان و دستور زبان",questions:[
-      ["معنی environment چیست؟","Environment یعنی «محیط زیست» یا «محیط اطراف»."],
-      ["جملهٔ If it rains, we will stay home یعنی چه؟","یعنی «اگر باران ببارد، در خانه می‌مانیم»."],
-      ["شکل سوم فعل write چیست؟","شکل سوم write، واژهٔ written است."]
-    ]},
-    {name:"پیام‌های آسمان",icon:"🌙",color:"linear-gradient(135deg,#b4a1ff,#8463e8)",desc:"اخلاق و مفاهیم دینی",questions:[
-      ["انصاف یعنی چه؟","یعنی در داوری و رفتار، حق دیگران را رعایت کنیم و با آن‌ها عادلانه برخورد کنیم."],
-      ["چرا مشورت اهمیت دارد؟","مشورت کمک می‌کند دیدگاه‌های گوناگون را بشناسیم و تصمیم سنجیده‌تری بگیریم."]
-    ]}
-  ]
-};
+const quizQuestions=[
+{q:"حاصل ۳ + ۴ چیست؟",options:["۵","۷","۸","۹"],correct:1},
+{q:"سه حالت اصلی ماده کدام‌اند؟",options:["سنگ و چوب و آب","جامد و مایع و گاز","نور و صدا و گرما","خاک و آب و هوا"],correct:1},
+{q:"معنی Book چیست؟",options:["مدرسه","دفتر","کتاب","مداد"],correct:2},
+{q:"مجموع زاویه‌های داخلی مثلث چند درجه است؟",options:["۹۰","۱۸۰","۲۷۰","۳۶۰"],correct:1},
+{q:"گذشته فعل Go چیست؟",options:["Goed","Gone فقط","Went","Going"],correct:2}
+];
 
-function chooseGrade(grade,button){
-  currentGrade=grade;
-  document.querySelectorAll('.grade').forEach(b=>b.classList.remove('active'));
-  button.classList.add('active');
-  document.getElementById('gradeLabel').textContent='نمونه محتوای پایه '+({'7':'هفتم','8':'هشتم','9':'نهم'}[grade]);
-  document.getElementById('lessonPanel').classList.remove('show');
-  renderSubjects();
-  document.getElementById('lessons').scrollIntoView({behavior:'smooth'});
+let grade="7",selectedSubject=null,selectedChapter=0,quizSubmitted=false;
+let favorites=JSON.parse(localStorage.getItem("noraFavorites")||"[]");
+
+function go(id){document.getElementById(id).scrollIntoView({behavior:"smooth",block:"start"})}
+function home(){closePanel("lessonPanel");closePanel("favoritesPanel");closePanel("quizPanel");window.scrollTo({top:0,behavior:"smooth"})}
+function closePanel(id){document.getElementById(id).classList.remove("show")}
+function setGrade(g,el){
+ grade=g;
+ document.querySelectorAll(".grade").forEach(b=>b.classList.remove("active"));
+ el.classList.add("active");
+ document.getElementById("gradeText").textContent="پایه "+({"7":"هفتم","8":"هشتم","9":"نهم"}[g]);
+ closePanel("lessonPanel");
+ renderSubjects();
 }
-
+function clearSearch(){document.getElementById("search").value="";renderSubjects()}
 function renderSubjects(){
-  const term=document.getElementById('search').value.trim().toLowerCase();
-  const items=subjectsData[currentGrade].filter(s=>s.name.toLowerCase().includes(term));
-  const container=document.getElementById('subjects');
-  if(!items.length){
-    container.innerHTML='<div class="empty">درسی با این نام پیدا نشد. نام دیگری را جست‌وجو کن.</div>';
-    return;
-  }
-  container.innerHTML=items.map((s,i)=>`
-    <article class="subject">
-      <div class="subject-art" style="background:${s.color}"><span>${s.icon}</span></div>
-      <div class="subject-info">
-        <h3>${s.name}</h3>
-        <p>${s.desc}</p>
-        <button class="btn" onclick="openLesson('${s.name}')">دیدن سؤال‌ها ←</button>
-      </div>
-    </article>`).join('');
+ const term=document.getElementById("search").value.trim().toLowerCase();
+ const list=data[grade].filter(s=>s.name.toLowerCase().includes(term));
+ document.getElementById("subjects").innerHTML=list.length?list.map(s=>`
+ <article class="subject">
+  <div class="art" style="background:${s.color}"><span>${s.icon}</span></div>
+  <div class="subject-content"><h3>${s.name}</h3><p>${s.desc} · ${s.chapters.length} بخش</p>
+  <button class="btn" onclick="openSubject('${s.name}')">ورود به درس ←</button></div>
+ </article>`).join(""):'<div class="notice">درسی پیدا نشد؛ نام دیگری را جست‌وجو کن.</div>';
 }
-
-function openLesson(name){
-  const subject=subjectsData[currentGrade].find(s=>s.name===name);
-  if(!subject)return;
-  document.getElementById('lessonTitle').textContent=subject.icon+' '+subject.name+' — پایه '+({'7':'هفتم','8':'هشتم','9':'نهم'}[currentGrade]);
-  document.getElementById('questions').innerHTML=subject.questions.map((q,i)=>`
-    <div class="question">
-      <span class="badge">سؤال ${i+1}</span>
-      <h4>${q[0]}</h4>
-      <button class="btn btn-soft no-print" onclick="toggleAnswer(this)">نمایش پاسخ تشریحی</button>
-      <div class="answer"><strong>پاسخ پیشنهادی:</strong> ${q[1]}</div>
-    </div>`).join('');
-  document.getElementById('lessonPanel').classList.add('show');
-  document.getElementById('lessonPanel').scrollIntoView({behavior:'smooth',block:'start'});
+function openSubject(name){
+ selectedSubject=data[grade].find(s=>s.name===name);
+ selectedChapter=0;
+ if(!selectedSubject)return;
+ document.getElementById("lessonTitle").textContent=selectedSubject.icon+" "+selectedSubject.name+" — پایه "+({"7":"هفتم","8":"هشتم","9":"نهم"}[grade]);
+ document.getElementById("chapters").innerHTML=selectedSubject.chapters.map((c,i)=>`<button class="chapter ${i===0?"active":""}" onclick="selectChapter(${i},this)">${c.title}</button>`).join("");
+ renderQuestions();
+ document.getElementById("lessonPanel").classList.add("show");
+ go("lessonPanel");
 }
-
-function toggleAnswer(button){
-  const answer=button.nextElementSibling;
-  answer.classList.toggle('show');
-  button.textContent=answer.classList.contains('show')?'بستن پاسخ ▲':'نمایش پاسخ تشریحی';
+function selectChapter(i,el){
+ selectedChapter=i;
+ document.querySelectorAll(".chapter").forEach(b=>b.classList.remove("active"));
+ el.classList.add("active");
+ renderQuestions();
 }
-
-function closeLesson(){
-  document.getElementById('lessonPanel').classList.remove('show');
+function renderQuestions(){
+ const chapters=selectedSubject.chapters;
+ const questions=chapters[selectedChapter].qs;
+ document.getElementById("questions").innerHTML=questions.map((q,i)=>{
+  const id=grade+"|"+selectedSubject.name+"|"+selectedChapter+"|"+i;
+  const saved=favorites.includes(id);
+  return `<article class="question">
+   <span class="muted">سؤال ${i+1} · ${chapters[selectedChapter].title}</span>
+   <h3>${q[0]}</h3>
+   <textarea rows="2" placeholder="پاسخ خودت را اینجا بنویس..."></textarea>
+   <div class="row-buttons no-print">
+    <button class="btn soft small" onclick="toggleAnswer(this)">نمایش پاسخ</button>
+    <button class="btn soft small" onclick="favorite('${id}',this)">${saved?"★ ذخیره شده":"☆ افزودن به علاقه‌مندی‌ها"}</button>
+   </div>
+   <div class="answer"><strong>پاسخ پیشنهادی:</strong> ${q[1]}</div>
+  </article>`;
+ }).join("");
 }
-
-function goHome(){
-  document.getElementById('search').value='';
-  document.getElementById('lessonPanel').classList.remove('show');
-  window.scrollTo({top:0,behavior:'smooth'});
+function toggleAnswer(btn){
+ const ans=btn.closest(".question").querySelector(".answer");
+ ans.classList.toggle("show");
+ btn.textContent=ans.classList.contains("show")?"بستن پاسخ":"نمایش پاسخ";
 }
-
+function showAllAnswers(){
+ document.querySelectorAll("#questions .answer").forEach(a=>a.classList.add("show"));
+ document.querySelectorAll("#questions .question .btn.soft").forEach(b=>{if(b.textContent.includes("پاسخ"))b.textContent="بستن پاسخ"});
+}
+function favorite(id,btn){
+ if(favorites.includes(id)){favorites=favorites.filter(x=>x!==id)}
+ else{favorites.push(id)}
+ localStorage.setItem("noraFavorites",JSON.stringify(favorites));
+ if(btn)btn.textContent=favorites.includes(id)?"★ ذخیره شده":"☆ افزودن به علاقه‌مندی‌ها";
+}
+function showFavorites(){
+ closePanel("lessonPanel");closePanel("quizPanel");
+ const list=document.getElementById("favoritesList");
+ const rows=[];
+ favorites.forEach(id=>{
+  const [g,name,ch,qi]=id.split("|");
+  const s=data[g]?.find(x=>x.name===name);
+  const q=s?.chapters[Number(ch)]?.qs[Number(qi)];
+  if(q)rows.push({id,g,name,q});
+ });
+ list.innerHTML=rows.length?rows.map(r=>`<div class="question"><b>${r.name} — پایه ${r.g}</b><p>${r.q[0]}</p><p class="muted">${r.q[1]}</p><button class="btn red small" onclick="removeFavorite('${r.id}')">حذف از علاقه‌مندی‌ها</button></div>`).join(""):'<div class="notice">هنوز سؤالی ذخیره نکرده‌ای. از داخل هر درس روی افزودن به علاقه‌مندی‌ها بزن.</div>';
+ document.getElementById("favoritesPanel").classList.add("show");
+ go("favoritesPanel");
+}
+function removeFavorite(id){favorites=favorites.filter(x=>x!==id);localStorage.setItem("noraFavorites",JSON.stringify(favorites));showFavorites()}
+function startQuiz(){
+ closePanel("lessonPanel");closePanel("favoritesPanel");
+ quizSubmitted=false;
+ document.getElementById("quizContent").innerHTML=quizQuestions.map((q,i)=>`
+ <div class="question"><h3>${i+1}. ${q.q}</h3>
+ ${q.options.map((o,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}"> ${o}</label>`).join("")}
+ </div>`).join("")+'<button class="btn" onclick="gradeQuiz()">ثبت پاسخ‌ها و دیدن نمره</button><div id="quizResult"></div>';
+ document.getElementById("quizPanel").classList.add("show");
+ go("quizPanel");
+}
+function gradeQuiz(){
+ if(quizSubmitted)return;
+ let score=0,answered=0;
+ quizQuestions.forEach((q,i)=>{
+  const checked=document.querySelector(`input[name="q${i}"]:checked`);
+  if(checked){answered++;if(Number(checked.value)===q.correct)score++}
+ });
+ quizSubmitted=true;
+ document.getElementById("quizResult").innerHTML=`<div class="result">نمره: ${score} از ${quizQuestions.length}</div><p>به ${answered} سؤال از ${quizQuestions.length} سؤال پاسخ دادی.</p><div class="notice">این نمره فقط مربوط به آزمون کوتاه همین صفحه است.</div><button class="btn soft" onclick="startQuiz()">آزمون دوباره</button>`;
+}
+function toggleDark(){document.body.classList.toggle("dark");localStorage.setItem("noraDark",document.body.classList.contains("dark")?"1":"0")}
+function printPage(){document.querySelectorAll("#questions .answer").forEach(a=>a.classList.add("show"));window.print()}
+if(localStorage.getItem("noraDark")==="1")document.body.classList.add("dark");
 renderSubjects();
 </script>
 </body>
-      </html>
+</html>
